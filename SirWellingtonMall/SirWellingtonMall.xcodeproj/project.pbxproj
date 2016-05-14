@@ -21,6 +21,10 @@
 		DE3B72D81CE7A4C700E968F8 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */; };
 		DE3B72DA1CE7A53200E968F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D91CE7A53200E968F8 /* Extensions.swift */; };
 		DE3B72DC1CE7A74500E968F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72DB1CE7A74500E968F8 /* Colors.swift */; };
+		DE3B72DF1CE7C90E00E968F8 /* PTSans.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DE3B72DE1CE7C90E00E968F8 /* PTSans.ttc */; };
+		DE3B72E11CE7CAC200E968F8 /* AddProduct1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72E01CE7CAC200E968F8 /* AddProduct1ViewController.swift */; };
+		DE3B72E31CE7CACA00E968F8 /* AddProduct2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72E21CE7CACA00E968F8 /* AddProduct2ViewController.swift */; };
+		DE3B72E51CE7CAD400E968F8 /* AddProduct3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72E41CE7CAD400E968F8 /* AddProduct3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DE3B72D91CE7A53200E968F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DE3B72DB1CE7A74500E968F8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DE3B72DE1CE7C90E00E968F8 /* PTSans.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTSans.ttc; sourceTree = "<group>"; };
+		DE3B72E01CE7CAC200E968F8 /* AddProduct1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProduct1ViewController.swift; sourceTree = "<group>"; };
+		DE3B72E21CE7CACA00E968F8 /* AddProduct2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProduct2ViewController.swift; sourceTree = "<group>"; };
+		DE3B72E41CE7CAD400E968F8 /* AddProduct3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProduct3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3B72CF1CE7964700E968F8 /* Didot.ttc */,
+				DE3B72DE1CE7C90E00E968F8 /* PTSans.ttc */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -144,6 +153,9 @@
 				DE3B72D31CE7A0C200E968F8 /* ProductListViewController.swift */,
 				DE3B72D51CE7A2FC00E968F8 /* Products.swift */,
 				DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */,
+				DE3B72E01CE7CAC200E968F8 /* AddProduct1ViewController.swift */,
+				DE3B72E21CE7CACA00E968F8 /* AddProduct2ViewController.swift */,
+				DE3B72E41CE7CAD400E968F8 /* AddProduct3ViewController.swift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +256,7 @@
 				DE3B72B91CE7864C00E968F8 /* LaunchScreen.storyboard in Resources */,
 				DE3B72B61CE7864C00E968F8 /* Assets.xcassets in Resources */,
 				DE3B72D01CE7964700E968F8 /* Didot.ttc in Resources */,
+				DE3B72DF1CE7C90E00E968F8 /* PTSans.ttc in Resources */,
 				DE3B72B41CE7864C00E968F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,12 +325,15 @@
 			files = (
 				DE3B72B11CE7864C00E968F8 /* ShoppingListViewController.swift in Sources */,
 				DE3B72DC1CE7A74500E968F8 /* Colors.swift in Sources */,
+				DE3B72E51CE7CAD400E968F8 /* AddProduct3ViewController.swift in Sources */,
+				DE3B72E11CE7CAC200E968F8 /* AddProduct1ViewController.swift in Sources */,
 				DE3B72D81CE7A4C700E968F8 /* ProductViewController.swift in Sources */,
 				DE3B72D41CE7A0C200E968F8 /* ProductListViewController.swift in Sources */,
 				DE3B72D61CE7A2FC00E968F8 /* Products.swift in Sources */,
 				DE3B72D21CE79EB100E968F8 /* GroceryItem.swift in Sources */,
 				DE3B72AF1CE7864C00E968F8 /* AppDelegate.swift in Sources */,
 				DE3B72DA1CE7A53200E968F8 /* Extensions.swift in Sources */,
+				DE3B72E31CE7CACA00E968F8 /* AddProduct2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,18 @@
             <string>Didot-Bold</string>
             <string>Didot-Bold</string>
             <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
+        </mutableArray>
+        <mutableArray key="PTSans.ttc">
+            <string>PTSans-Bold</string>
+            <string>PTSans-Regular</string>
+            <string>PTSans-Regular</string>
+            <string>PTSans-Regular</string>
+            <string>PTSans-Regular</string>
+            <string>PTSans-Bold</string>
+            <string>PTSans-NarrowBold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,14 +53,14 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6w-M4-pFz">
-                                            <rect key="frame" x="182" y="32" width="94" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                            <rect key="frame" x="182" y="32" width="87" height="29"/>
+                                            <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="24"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk is really good for you." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRx-Oc-Evb">
-                                            <rect key="frame" x="182" y="69" width="173" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="182" y="69" width="195" height="18"/>
+                                            <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -58,10 +70,13 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bt-Wqi">
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bt-Wqi">
                                             <rect key="frame" x="490" y="175" width="94" height="29"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onStepperChanged:" destination="zjF-Yw-IIx" eventType="valueChanged" id="0NZ-0G-5YS"/>
+                                            </connections>
                                         </stepper>
                                     </subviews>
                                     <constraints>
@@ -161,6 +176,9 @@
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="Add" id="eoN-pD-Rjz">
                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="S94-2X-iAX" kind="presentation" modalTransitionStyle="coverVertical" id="Bqp-Ud-NPt"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -190,8 +208,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk is really good for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq4-kD-kcS">
-                                <rect key="frame" x="75" y="429" width="450" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <rect key="frame" x="75" y="429" width="450" height="26"/>
+                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="22"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -238,28 +256,58 @@
             </objects>
             <point key="canvasLocation" x="2743" y="-61"/>
         </scene>
-        <!--Inventory View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="fa6-uk-GqN">
             <objects>
-                <collectionViewController id="5zt-sx-hHn" customClass="InventoryViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="5zt-sx-hHn" customClass="ProductListViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lhb-CR-xc5">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mAw-eY-hqC">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="205" height="167"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="R69-RP-CHv">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="R69-RP-CHv" customClass="ProductCell" customModule="SirWellingtonMall" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="205" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="205" height="167"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asparagus" translatesAutoresizingMaskIntoConstraints="NO" id="3PF-Ke-wSD">
+                                            <rect key="frame" x="52" y="12" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="3PF-Ke-wSD" secondAttribute="height" multiplier="1:1" id="yX7-ow-tiA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asparagus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxJ-qA-MMy">
+                                            <rect key="frame" x="0.0" y="120" width="205" height="29"/>
+                                            <fontDescription key="fontDescription" name="PTSans-NarrowBold" family="PT Sans Narrow" pointSize="24"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IxJ-qA-MMy" firstAttribute="leading" secondItem="R69-RP-CHv" secondAttribute="leading" id="5av-Qt-7jK"/>
+                                    <constraint firstAttribute="trailing" secondItem="IxJ-qA-MMy" secondAttribute="trailing" id="G8h-Xy-9MU"/>
+                                    <constraint firstItem="3PF-Ke-wSD" firstAttribute="top" secondItem="R69-RP-CHv" secondAttribute="topMargin" constant="4" id="LSf-UK-rwW"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IxJ-qA-MMy" secondAttribute="bottom" id="MmZ-Y0-xaI"/>
+                                    <constraint firstItem="IxJ-qA-MMy" firstAttribute="top" secondItem="3PF-Ke-wSD" secondAttribute="bottom" constant="8" id="XeL-7H-YNN"/>
+                                    <constraint firstItem="3PF-Ke-wSD" firstAttribute="height" secondItem="R69-RP-CHv" secondAttribute="height" multiplier="0.6" id="ahP-3f-5Ug"/>
+                                    <constraint firstItem="3PF-Ke-wSD" firstAttribute="centerX" secondItem="R69-RP-CHv" secondAttribute="centerX" id="ic0-hW-0vk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="productImage" destination="3PF-Ke-wSD" id="BEM-u0-daC"/>
+                                    <outlet property="productName" destination="IxJ-qA-MMy" id="VOR-xf-dG7"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -272,6 +320,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="63q-xb-MuP"/>
                         <barButtonItem key="leftBarButtonItem" image="Close" id="wts-CY-wbP">
                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="tvR-gw-Pl3" kind="unwind" identifier="unwind" unwindAction="unwindFromProductList:" id="AWp-PZ-VBu"/>
+                            </connections>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="zuT-FJ-7zk">
                             <rect key="frame" x="180" y="6" width="240" height="33"/>
@@ -294,6 +345,9 @@
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="Add" id="O7T-CT-h0G">
                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="SlD-vo-PMK" kind="show" id="T0C-d5-KHh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -301,8 +355,70 @@
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEQ-Vi-Nh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tvR-gw-Pl3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="786"/>
+            <point key="canvasLocation" x="2743" y="786"/>
+        </scene>
+        <!--Add Product1 View Controller-->
+        <scene sceneID="Jgu-SZ-slV">
+            <objects>
+                <viewController id="SlD-vo-PMK" customClass="AddProduct1ViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ubX-y1-3go"/>
+                        <viewControllerLayoutGuide type="bottom" id="NGf-2q-foT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tVb-RP-a6N">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-Wg-auy">
+                                <rect key="frame" x="75" y="32" width="450" height="19"/>
+                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="onEnterPressed:" destination="SlD-vo-PMK" eventType="editingDidEndOnExit" id="Ijz-8D-fZv"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wbB-Wg-auy" firstAttribute="top" secondItem="ubX-y1-3go" secondAttribute="bottom" constant="32" id="46I-hB-lwc"/>
+                            <constraint firstItem="wbB-Wg-auy" firstAttribute="centerX" secondItem="tVb-RP-a6N" secondAttribute="centerX" id="4aT-U3-Y1E"/>
+                            <constraint firstItem="wbB-Wg-auy" firstAttribute="width" secondItem="tVb-RP-a6N" secondAttribute="width" multiplier="0.75" id="XaE-RW-GL6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPZ-kH-4Ps">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="tHP-Ri-wwH"/>
+                        <view key="titleView" contentMode="scaleToFill" id="yWo-3Y-ETb">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the product called?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bnD-M0-wjF">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
+                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="bnD-M0-wjF" secondAttribute="bottom" id="Il4-6q-mDD"/>
+                                <constraint firstItem="bnD-M0-wjF" firstAttribute="top" secondItem="yWo-3Y-ETb" secondAttribute="top" id="Q0i-4e-fNm"/>
+                                <constraint firstItem="bnD-M0-wjF" firstAttribute="leading" secondItem="yWo-3Y-ETb" secondAttribute="leading" id="fkQ-py-11e"/>
+                                <constraint firstAttribute="trailing" secondItem="bnD-M0-wjF" secondAttribute="trailing" id="x4s-eS-bed"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="productNameField" destination="wbB-Wg-auy" id="z16-pS-RaU"/>
+                        <segue destination="5Lt-Wy-W8o" kind="show" identifier="ToNext" id="PsE-mN-rg6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AyO-XZ-a3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2795" y="1552"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="c9u-qb-C8l">
@@ -341,17 +457,159 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFG-rq-LNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="786"/>
+            <point key="canvasLocation" x="1974" y="786"/>
+        </scene>
+        <!--Add Product2 View Controller-->
+        <scene sceneID="9cS-bl-GfX">
+            <objects>
+                <viewController id="5Lt-Wy-W8o" customClass="AddProduct2ViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Lo-pL-S7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="f5d-7L-iBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idu-Sr-Pb6">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-oX-Guf">
+                                <rect key="frame" x="75" y="32" width="450" height="19"/>
+                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="onEnterPressed:" destination="5Lt-Wy-W8o" eventType="editingDidEndOnExit" id="7YA-gl-GZO"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1gd-oX-Guf" firstAttribute="centerX" secondItem="idu-Sr-Pb6" secondAttribute="centerX" id="GRX-v2-nXl"/>
+                            <constraint firstItem="1gd-oX-Guf" firstAttribute="top" secondItem="8Lo-pL-S7C" secondAttribute="bottom" constant="32" id="WqT-aj-rap"/>
+                            <constraint firstItem="1gd-oX-Guf" firstAttribute="width" secondItem="idu-Sr-Pb6" secondAttribute="width" multiplier="0.75" id="yD7-US-Bp8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="djo-Qa-ElP">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="ZJI-gt-W1i"/>
+                        <view key="titleView" contentMode="scaleToFill" id="apn-ji-2GE">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n4f-0B-y4G">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
+                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="n4f-0B-y4G" secondAttribute="trailing" id="J5O-bH-fHw"/>
+                                <constraint firstItem="n4f-0B-y4G" firstAttribute="leading" secondItem="apn-ji-2GE" secondAttribute="leading" id="XAB-cv-9uH"/>
+                                <constraint firstItem="n4f-0B-y4G" firstAttribute="top" secondItem="apn-ji-2GE" secondAttribute="top" id="ZI7-bf-EXh"/>
+                                <constraint firstAttribute="bottom" secondItem="n4f-0B-y4G" secondAttribute="bottom" id="gbw-Mf-RJg"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="productDescriptionField" destination="1gd-oX-Guf" id="Scl-wL-O3Z"/>
+                        <segue destination="PKc-Lf-hJm" kind="show" identifier="ToNext" id="C59-Pt-jm5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bte-7D-D94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3513" y="1552"/>
+        </scene>
+        <!--Add Product3 View Controller-->
+        <scene sceneID="OaY-Cx-aHH">
+            <objects>
+                <viewController id="PKc-Lf-hJm" customClass="AddProduct3ViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pdl-Xi-1eM"/>
+                        <viewControllerLayoutGuide type="bottom" id="YjL-SM-gP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ztz-yz-ide">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-ik-i7y">
+                                <rect key="frame" x="233" y="16" width="134" height="134"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rBL-ik-i7y" secondAttribute="height" multiplier="1:1" id="BJb-w7-oyZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-aI-bDb">
+                                <rect key="frame" x="-2" y="444" width="604" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lgs-DA-W6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="30"/>
+                                <state key="normal" title="SELECT IMAGE"/>
+                                <connections>
+                                    <action selector="onSelectImage:" destination="PKc-Lf-hJm" eventType="touchUpInside" id="t1o-SL-nD9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rBL-ik-i7y" firstAttribute="top" secondItem="Pdl-Xi-1eM" secondAttribute="bottom" constant="16" id="CDG-fG-NMa"/>
+                            <constraint firstItem="YjL-SM-gP9" firstAttribute="top" secondItem="a2b-aI-bDb" secondAttribute="bottom" constant="32" id="P4q-HH-zZu"/>
+                            <constraint firstItem="a2b-aI-bDb" firstAttribute="leading" secondItem="Ztz-yz-ide" secondAttribute="leading" constant="-2" id="U0v-Ra-yWe"/>
+                            <constraint firstItem="rBL-ik-i7y" firstAttribute="centerX" secondItem="Ztz-yz-ide" secondAttribute="centerX" id="bkf-U1-FJL"/>
+                            <constraint firstItem="rBL-ik-i7y" firstAttribute="height" secondItem="Ztz-yz-ide" secondAttribute="height" multiplier="0.25" id="qPO-9k-fxo"/>
+                            <constraint firstAttribute="trailing" secondItem="a2b-aI-bDb" secondAttribute="trailing" constant="-2" id="qni-Ef-ryZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nol-Pc-thp">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="GUx-DQ-XZf"/>
+                        <view key="titleView" contentMode="scaleToFill" id="swG-Pp-0Dw">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-qO-WEi">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
+                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qSq-qO-WEi" firstAttribute="leading" secondItem="swG-Pp-0Dw" secondAttribute="leading" id="AR6-sk-vsv"/>
+                                <constraint firstAttribute="bottom" secondItem="qSq-qO-WEi" secondAttribute="bottom" id="TuM-1b-MNZ"/>
+                                <constraint firstItem="qSq-qO-WEi" firstAttribute="top" secondItem="swG-Pp-0Dw" secondAttribute="top" id="frf-xi-E51"/>
+                                <constraint firstAttribute="trailing" secondItem="qSq-qO-WEi" secondAttribute="trailing" id="srP-K9-eWl"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="WxT-PE-4AG">
+                            <connections>
+                                <action selector="onDone:" destination="PKc-Lf-hJm" id="kSa-0x-diz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="productImage" destination="rBL-ik-i7y" id="tuM-PE-EWs"/>
+                        <outlet property="selectImageButton" destination="a2b-aI-bDb" id="9eX-Ev-oEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aV-Ec-iFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4211" y="1552"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add" width="40" height="40"/>
+        <image name="Asparagus" width="500" height="264"/>
         <image name="Checklist" width="40" height="40"/>
         <image name="Close" width="40" height="40"/>
         <image name="Soy-Milk" width="2448" height="3264"/>
         <image name="Tap-This-Button" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jys-Dx-olf"/>
+        <segue reference="Zf2-bE-csX"/>
     </inferredMetricsTieBreakers>
 </document>

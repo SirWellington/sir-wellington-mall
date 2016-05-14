@@ -8,6 +8,7 @@
 
 import Foundation
 import MCSwipeTableViewCell
+import MobileCoreServices
 import UIKit
 
 extension Int {
@@ -123,6 +124,26 @@ extension UILabel {
             }
         }
     }
+}
+
+
+//MARK: Add Image Picker Capability
+extension UIViewController {
+    
+    func prepareImagePicker() -> UIImagePickerController? {
+        
+        guard UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) else {
+            return nil
+        }
+        
+        let picker = UIImagePickerController()
+        picker.sourceType = .PhotoLibrary
+        picker.mediaTypes = [kUTTypeImage as String]
+        picker.allowsEditing = true
+        
+        return picker
+    }
+    
 }
 
 

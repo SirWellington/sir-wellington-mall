@@ -23,9 +23,23 @@ class ShoppingListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if shoppingList.count > 4 {
+            self.navigationController?.hidesBarsOnSwipe = true
+        }
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        
+        super.viewDidDisappear(animated)
+        
+        self.navigationController?.hidesBarsOnSwipe = false
+    }
+    
 }
 
 
@@ -37,6 +51,10 @@ extension ShoppingListViewController {
         self.performSegueWithIdentifier("ToProduct", sender: item.product)
     }
     
+    @IBAction func unwindFromProductList(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let destination = segue.destinationViewController
@@ -44,6 +62,24 @@ extension ShoppingListViewController {
         if let groceryView = destination as? ProductViewController, product = sender as? Product {
             groceryView.product = product
         }
+        
+        if let navController = destination as? UINavigationController, let productList = navController.topViewController as? ProductListViewController {
+        
+            productList.onProductSelected = { product in
+                
+                let item = GroceryItem(product: product, note: "", amount: 1)
+                self.onGroceryAdded(item)
+            }
+        }
+    }
+}
+
+//MARK: Data Modifications
+extension ShoppingListViewController {
+    
+    private func onGroceryAdded(newGroceryItem: GroceryItem) {
+        self.shoppingList.append(newGroceryItem)
+        self.reloadSection(0, animation: .Automatic)
     }
 }
 
@@ -100,6 +136,17 @@ extension ShoppingListViewController {
         cell.pictureImageView.image = item.product.getImage()
         cell.nameLabel.text = item.product.name
         cell.descriptionLabel.text = item.product.description
+        cell.amountLabel.text = "\(item.amount)"
+        cell.amountStepper.value = Double(item.amount)
+        
+        cell.stepperDelegate = { [unowned cell] stepper in
+            
+            let newValue = stepper.value
+            item.amount = Int(newValue)
+            cell.amountLabel.text = "\(item.amount)"
+            
+            AromaClient.sendLowPriorityMessage(withTitle: "Grocery Amount Changed", withBody: "To \(newValue)")
+        }
         
         self.addSwipeToDelete(toCell: cell, atIndexPath: path) { [weak self] deletedPath in
             
@@ -141,6 +188,8 @@ extension ShoppingListViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        self.navigationController?.navigationBarHidden = false
+        
         let row = indexPath.row
         
         guard row >= 0 && row < shoppingList.count
@@ -164,5 +213,11 @@ class GroceryItemCell : MCSwipeTableViewCell {
     @IBOutlet weak var amountStepper: UIStepper!
     @IBOutlet weak var amountLabel: UILabel!
     
+    var stepperDelegate: ((UIStepper) -> Void)?
+    
+    
+    @IBAction func onStepperChanged(sender: AnyObject) {
+        stepperDelegate?(amountStepper)
+    }
     
 }

@@ -34,7 +34,6 @@ class Product {
 class Products {
     
     
-    
     // MARK: Dairy
     private static let eggs = Product(name: "Eggs", description: "They are good, in moderation.", imageName: "Eggs")
     private static let soyMilk = Product(name: "Soy Milk", description: "Soy milk is much better than regular milk. Tastes better too.", imageName: "Soy-Milk")
@@ -54,7 +53,7 @@ class Products {
     private static let peanutButter = Product(name: "Peanut Butter", description: "The World in your Mouth.", imageName: "Peanut-Butter")
     
     
-    static let BASIC_INVENTORY: [Product] = [
+    static var BASIC_INVENTORY: [Product] = [
         Products.asparagus,
         Products.coffee,
         Products.chickenBreast,
