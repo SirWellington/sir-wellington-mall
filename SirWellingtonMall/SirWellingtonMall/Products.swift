@@ -15,16 +15,34 @@ class Product {
     var name: String
     var description: String? = nil
     var imageName: String? = nil
+    private var image: UIImage? = nil
     
     init(name: String, description: String?, imageName: String?) {
         self.name = name
         self.description = description
         self.imageName = imageName
+        
+        self.image = getImage()
+    }
+    
+    func setImage(image: UIImage) {
+        self.image = image
+    }
+    
+    func clearImage() {
+        self.image = nil
     }
     
     func getImage() -> UIImage? {
+        
+        if let image = self.image {
+            return image
+        }
+        
         guard let imageName = self.imageName where !imageName.isEmpty
-            else { return nil }
+        else {
+            return nil
+        }
         
         return UIImage(named: imageName)
     }

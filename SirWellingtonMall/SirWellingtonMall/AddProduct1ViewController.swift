@@ -21,12 +21,15 @@ class AddProduct1ViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideNavigationBarShadow()
         productNameField.becomeFirstResponder()
     }
     
     
     @IBAction func onEnterPressed(sender: AnyObject) {
+        product = Product(name: "'", description: "", imageName: "")
         product?.name = productNameField.text ?? ""
+        
         goToNext()
     }
     

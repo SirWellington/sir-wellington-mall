@@ -45,6 +45,11 @@ extension ProductListViewController {
     
     @IBAction func unwindFromAddProduct(segue: UIStoryboardSegue) {
         
+        let source = segue.sourceViewController
+        
+        if let lastStep = source as? AddProduct3ViewController, product = lastStep.product {
+            self.onProductAdded(product)
+        }
     }
 }
 
@@ -52,7 +57,7 @@ extension ProductListViewController {
 extension ProductListViewController {
     
     private func onProductAdded(newProduct: Product) {
-        Products.BASIC_INVENTORY.append(newProduct)
+        self.products.append(newProduct)
         self.collectionView?.reloadData()
     }
 }

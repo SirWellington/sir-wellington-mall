@@ -32,12 +32,17 @@ extension AddProduct3ViewController {
     @IBAction func onSelectImage(sender: AnyObject) {
         
         guard let imagePicker = self.prepareImagePicker() else { return }
+        imagePicker.delegate = self
         
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     
     @IBAction func onDone(sender: AnyObject) {
+        
+        if let image = self.productImage?.image {
+            product.setImage(image)
+        }
         
         self.unwind()
     }
