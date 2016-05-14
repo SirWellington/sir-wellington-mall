@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShoppingListViewController.swift
 //  SirWellingtonMall
 //
 //  Created by Juan Wellington Moreno on 5/14/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroceryListViewController: UITableViewController {
+class ShoppingListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

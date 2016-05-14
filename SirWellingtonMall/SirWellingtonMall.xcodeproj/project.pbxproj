@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F96E4750E9C85F8F990160D /* Pods_SirWellingtonMall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */; };
 		DE3B72AF1CE7864C00E968F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */; };
-		DE3B72B11CE7864C00E968F8 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72B01CE7864C00E968F8 /* GroceryListViewController.swift */; };
+		DE3B72B11CE7864C00E968F8 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */; };
 		DE3B72B41CE7864C00E968F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3B72B21CE7864C00E968F8 /* Main.storyboard */; };
 		DE3B72B61CE7864C00E968F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3B72B51CE7864C00E968F8 /* Assets.xcassets */; };
 		DE3B72B91CE7864C00E968F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3B72B71CE7864C00E968F8 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SirWellingtonMall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3B72AB1CE7864C00E968F8 /* SirWellingtonMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SirWellingtonMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE3B72B01CE7864C00E968F8 /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		DE3B72B31CE7864C00E968F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE3B72B51CE7864C00E968F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE3B72B81CE7864C00E968F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,9 +112,9 @@
 				DE3B72D91CE7A53200E968F8 /* Extensions.swift */,
 				DE3B72D11CE79EB100E968F8 /* GroceryItem.swift */,
 				DE3B72D71CE7A4C700E968F8 /* GroceryItemViewController.swift */,
-				DE3B72B01CE7864C00E968F8 /* GroceryListViewController.swift */,
 				DE3B72D51CE7A2FC00E968F8 /* Inventory.swift */,
 				DE3B72D31CE7A0C200E968F8 /* InventoryViewController.swift */,
+				DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */,
 				DE3B72B51CE7864C00E968F8 /* Assets.xcassets */,
 				DE3B72CE1CE7960E00E968F8 /* Fonts */,
 				DE3B72B71CE7864C00E968F8 /* LaunchScreen.storyboard */,
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3B72B11CE7864C00E968F8 /* GroceryListViewController.swift in Sources */,
+				DE3B72B11CE7864C00E968F8 /* ShoppingListViewController.swift in Sources */,
 				DE3B72DC1CE7A74500E968F8 /* Colors.swift in Sources */,
 				DE3B72D81CE7A4C700E968F8 /* GroceryItemViewController.swift in Sources */,
 				DE3B72D41CE7A0C200E968F8 /* InventoryViewController.swift in Sources */,
