@@ -6,8 +6,8 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Add" fill="#1B2021">
-            <rect id="Rectangle-1" x="15" y="46" width="71" height="8" rx="38"></rect>
-            <rect id="Rectangle-1-Copy-3" transform="translate(50.500000, 50.000000) rotate(-270.000000) translate(-50.500000, -50.000000) " x="15" y="46" width="71" height="8" rx="38"></rect>
+            <rect id="Rectangle-1" x="15" y="44" width="71" height="12" rx="38"></rect>
+            <rect id="Rectangle-1-Copy-3" transform="translate(50.500000, 50.000000) rotate(-270.000000) translate(-50.500000, -50.000000) " x="15" y="44" width="71" height="12" rx="38"></rect>
         </g>
     </g>
 </svg>

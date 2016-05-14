@@ -1,47 +1,128 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="twS-5i-ZET">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Didot.ttc">
             <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
+            <string>Didot-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="B0g-LD-gMr">
-            <objects>
-                <tabBarController id="mBx-oz-hr1" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="yqY-Pg-9Hp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="twS-5i-ZET" kind="relationship" relationship="viewControllers" id="fgT-t0-AqF"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tFX-3q-wNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="355" y="574"/>
-        </scene>
-        <!--Table View Controller-->
+        <!--Shopping List View Controller-->
         <scene sceneID="kZP-9C-ptp">
             <objects>
-                <tableViewController id="6zz-cY-5WB" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="4QR-zF-gnD">
+                <tableViewController id="6zz-cY-5WB" customClass="ShoppingListViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="4QR-zF-gnD">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="zjF-Yw-IIx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroceryItemCell" rowHeight="150" id="zjF-Yw-IIx" customClass="GroceryItemCell" customModule="SirWellingtonMall" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zjF-Yw-IIx" id="57L-fF-Qmw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Soy-Milk" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-mp-Lpj">
+                                            <rect key="frame" x="24" y="15" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="BAw-mp-Lpj" secondAttribute="height" multiplier="1:1" id="lQo-2N-k6x"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6w-M4-pFz">
+                                            <rect key="frame" x="174" y="32" width="94" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk is really good for you." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRx-Oc-Evb">
+                                            <rect key="frame" x="174" y="69" width="180" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bt-Wqi">
+                                            <rect key="frame" x="490" y="97" width="94" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-iQ-qq2">
+                                            <rect key="frame" x="532" y="59" width="11" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OJb-Bt-Wqi" secondAttribute="bottom" constant="16" id="DTa-1G-Nwa"/>
+                                        <constraint firstItem="KRx-Oc-Evb" firstAttribute="top" secondItem="V6w-M4-pFz" secondAttribute="bottom" constant="8" id="Ec2-Yt-kJn"/>
+                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="leading" secondItem="57L-fF-Qmw" secondAttribute="leadingMargin" constant="16" id="HKS-M9-L9U"/>
+                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="centerY" secondItem="57L-fF-Qmw" secondAttribute="centerY" id="KVh-7U-KOi"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KRx-Oc-Evb" secondAttribute="trailing" id="S0g-UQ-0d6"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="V6w-M4-pFz" secondAttribute="trailing" id="bat-yq-hGB"/>
+                                        <constraint firstItem="OJb-Bt-Wqi" firstAttribute="top" secondItem="Mdb-iQ-qq2" secondAttribute="bottom" constant="16" id="eWD-9G-yBq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OJb-Bt-Wqi" secondAttribute="trailing" constant="8" id="gCC-JD-ayM"/>
+                                        <constraint firstItem="KRx-Oc-Evb" firstAttribute="leading" secondItem="V6w-M4-pFz" secondAttribute="leading" id="ih4-jL-SL0"/>
+                                        <constraint firstItem="Mdb-iQ-qq2" firstAttribute="centerX" secondItem="OJb-Bt-Wqi" secondAttribute="centerX" id="j1m-G4-N1P"/>
+                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="height" secondItem="57L-fF-Qmw" secondAttribute="height" multiplier="0.8" id="p2m-3T-44A"/>
+                                        <constraint firstItem="V6w-M4-pFz" firstAttribute="leading" secondItem="BAw-mp-Lpj" secondAttribute="trailing" constant="30" id="s3e-Vn-nFI"/>
+                                        <constraint firstItem="V6w-M4-pFz" firstAttribute="top" secondItem="57L-fF-Qmw" secondAttribute="topMargin" constant="24" id="t5U-YV-My9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="Mdb-iQ-qq2" id="bZc-7v-QIO"/>
+                                    <outlet property="amountStepper" destination="OJb-Bt-Wqi" id="0eG-wM-yhN"/>
+                                    <outlet property="descriptionLabel" destination="KRx-Oc-Evb" id="mpg-47-oxh"/>
+                                    <outlet property="nameLabel" destination="V6w-M4-pFz" id="Jlg-Vi-6XR"/>
+                                    <outlet property="pictureImageView" destination="BAw-mp-Lpj" id="yst-AC-1S3"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyCell" rowHeight="150" id="gzA-Nx-Rzn">
+                                <rect key="frame" x="0.0" y="178" width="600" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gzA-Nx-Rzn" id="37k-X6-RR7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tap-This-Button" translatesAutoresizingMaskIntoConstraints="NO" id="XjD-CS-CQ5">
+                                            <rect key="frame" x="426" y="8" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="XjD-CS-CQ5" secondAttribute="height" multiplier="1:1" id="zC9-a0-mMK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nothing on your list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-6F-u4U">
+                                            <rect key="frame" x="207" y="99" width="187" height="26"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="24"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap this button to add groceries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1Z-UZ-NXG">
+                                            <rect key="frame" x="396" y="166" width="180" height="36"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="y1Z-UZ-NXG" secondAttribute="trailing" constant="16" id="2C8-nm-wND"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XjD-CS-CQ5" secondAttribute="trailing" constant="16" id="2sE-bd-S7u"/>
+                                        <constraint firstItem="y1Z-UZ-NXG" firstAttribute="top" secondItem="XjD-CS-CQ5" secondAttribute="bottom" constant="8" id="B6D-53-1C0"/>
+                                        <constraint firstItem="XjD-CS-CQ5" firstAttribute="width" secondItem="37k-X6-RR7" secondAttribute="width" multiplier="0.25" id="GXE-UX-Eqx"/>
+                                        <constraint firstItem="gcv-6F-u4U" firstAttribute="centerX" secondItem="37k-X6-RR7" secondAttribute="centerX" id="MVe-Uz-gXM"/>
+                                        <constraint firstItem="y1Z-UZ-NXG" firstAttribute="width" secondItem="XjD-CS-CQ5" secondAttribute="width" multiplier="1.2" id="V36-cy-rlw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gcv-6F-u4U" secondAttribute="bottom" constant="16" id="kma-Zc-FKh"/>
+                                        <constraint firstAttribute="topMargin" secondItem="XjD-CS-CQ5" secondAttribute="top" id="q1k-xL-46D"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -52,6 +133,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="FLi-n0-VYp">
                         <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="yYb-O0-NKw"/>
+                        <barButtonItem key="leftBarButtonItem" image="Checklist" id="UId-E1-AbF">
+                            <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="B1i-wv-7co">
                             <rect key="frame" x="180" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,11 +156,116 @@
                                 <constraint firstAttribute="bottom" secondItem="0Px-Fs-m6T" secondAttribute="bottom" id="sor-b3-Sla"/>
                             </constraints>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" image="Add" id="eoN-pD-Rjz">
+                            <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ytC-1b-jdm" kind="show" identifier="ToGroceryItem" id="jys-Dx-olf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yu-GU-BZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="-61"/>
+        </scene>
+        <!--Grocery Item View Controller-->
+        <scene sceneID="ho3-HU-DQR">
+            <objects>
+                <viewController id="ytC-1b-jdm" customClass="GroceryItemViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bfN-1C-Iec"/>
+                        <viewControllerLayoutGuide type="bottom" id="14G-NI-RTA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d5h-mu-Mod">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Soy-Milk" translatesAutoresizingMaskIntoConstraints="NO" id="5US-34-a21">
+                                <rect key="frame" x="220" y="16" width="161" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5US-34-a21" secondAttribute="height" multiplier="1:1" id="3cE-fW-UPg"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="heT-rc-zxX">
+                                <rect key="frame" x="36" y="201" width="528" height="319"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Soy milk, sometimes referred to as soya milk or soy drink, is a liquid made by grinding and boiling soybeans with water. This milky beverage has a similar nutritional content to cow's milk and is staple food in many Asian countries. Its creamy texture, high nutritional value, and animal free ingredients have made soy milk popular around the world.</string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5US-34-a21" firstAttribute="top" secondItem="bfN-1C-Iec" secondAttribute="bottom" constant="16" id="KED-SW-db4"/>
+                            <constraint firstItem="heT-rc-zxX" firstAttribute="leading" secondItem="d5h-mu-Mod" secondAttribute="leadingMargin" constant="16" id="P4R-e0-Yhr"/>
+                            <constraint firstItem="5US-34-a21" firstAttribute="height" secondItem="d5h-mu-Mod" secondAttribute="height" multiplier="0.3" id="TaM-P2-bCw"/>
+                            <constraint firstItem="5US-34-a21" firstAttribute="centerX" secondItem="d5h-mu-Mod" secondAttribute="centerX" id="Tx1-xo-Eui"/>
+                            <constraint firstItem="heT-rc-zxX" firstAttribute="top" secondItem="5US-34-a21" secondAttribute="bottom" constant="24" id="Vgo-xe-XTq"/>
+                            <constraint firstItem="14G-NI-RTA" firstAttribute="top" secondItem="heT-rc-zxX" secondAttribute="bottom" constant="16" id="Zvc-O6-ZjS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="heT-rc-zxX" secondAttribute="trailing" constant="16" id="qyg-N4-GaT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ml-Jo-qjV">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="BW4-NZ-6hV">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt3-1s-lXW">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
+                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="wt3-1s-lXW" secondAttribute="bottom" id="C2h-kU-fYF"/>
+                                <constraint firstItem="wt3-1s-lXW" firstAttribute="top" secondItem="BW4-NZ-6hV" secondAttribute="top" id="Nkz-aR-0uO"/>
+                                <constraint firstItem="wt3-1s-lXW" firstAttribute="leading" secondItem="BW4-NZ-6hV" secondAttribute="leading" id="YD0-dm-fQB"/>
+                                <constraint firstAttribute="trailing" secondItem="wt3-1s-lXW" secondAttribute="trailing" id="awO-oQ-IXK"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZW-au-pCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="-67"/>
+        </scene>
+        <!--Inventory View Controller-->
+        <scene sceneID="fa6-uk-GqN">
+            <objects>
+                <collectionViewController id="5zt-sx-hHn" customClass="InventoryViewController" customModule="SirWellingtonMall" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lhb-CR-xc5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mAw-eY-hqC">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="R69-RP-CHv">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5zt-sx-hHn" id="yTr-Ep-kRG"/>
+                            <outlet property="delegate" destination="5zt-sx-hHn" id="GJl-UZ-PJB"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEQ-Vi-Nh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960" y="658"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="c9u-qb-C8l">
@@ -97,6 +287,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="40" height="40"/>
         <image name="Checklist" width="40" height="40"/>
+        <image name="Soy-Milk" width="261" height="193"/>
+        <image name="Tap-This-Button" width="200" height="200"/>
     </resources>
 </document>

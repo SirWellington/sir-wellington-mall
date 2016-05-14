@@ -6,4 +6,11 @@
 //  Copyright © 2016 Sir Wellington. All rights reserved.
 //
 
+import AromaSwiftClient
 import Foundation
+import UIKit
+
+class GroceryItemViewController : UIViewController {
+    
+    
+}

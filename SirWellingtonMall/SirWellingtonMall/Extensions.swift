@@ -137,6 +137,10 @@ extension UITableViewController {
 
 extension UITableViewController {
     
+    var emptyCell: UITableViewCell {
+        return UITableViewCell()
+    }
+    
     private var trashIcon: UIImage? { return UIImage(named: "Trash") }
 
     typealias OnSwipe = (NSIndexPath) -> Void

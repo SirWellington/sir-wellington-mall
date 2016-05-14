@@ -56,7 +56,7 @@ extension InventoryViewController {
         
         guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InventoryCell", forIndexPath: indexPath) as? InventoryCell
         else {
-            AromaClient.beginWithTitle("Table View Error")
+            AromaClient.beginWithTitle("Collection View Error")
                 .addBody("Failed to deque InventoryCell. Returning Empty cell.")
                 .withPriority(.MEDIUM)
                 .send()
