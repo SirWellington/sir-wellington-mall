@@ -1,0 +1,1 @@
+../../../AromaThrift/src/main/cocoa/Endpoint.h

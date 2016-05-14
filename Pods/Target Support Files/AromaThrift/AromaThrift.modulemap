@@ -1,0 +1,6 @@
+framework module AromaThrift {
+  umbrella header "AromaThrift-umbrella.h"
+
+  export *
+  module * { export * }
+}

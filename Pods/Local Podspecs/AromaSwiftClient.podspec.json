@@ -1,0 +1,27 @@
+{
+  "name": "AromaSwiftClient",
+  "module_name": "AromaSwiftClient",
+  "version": "1.1",
+  "summary": "The Official Aroma Swift Client.",
+  "homepage": "https://github.com/RedRoma/aroma-swift-client",
+  "license": "Code is Licensed under Apache 2.0",
+  "authors": {
+    "SirWellington": "wellington@redroma.tech"
+  },
+  "source": {
+    "path": "AromaSwiftClient/AromaSwiftClient/"
+  },
+  "source_files": "AromaSwiftClient/AromaSwiftClient/*.{h,m,swift}",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": false,
+  "dependencies": {
+    "AromaThrift": [
+      "1.9"
+    ],
+    "SwiftExceptionCatcher": [
+      "1.1"
+    ]
+  }
+}
