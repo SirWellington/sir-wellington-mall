@@ -6,16 +6,33 @@
 //  Copyright © 2016 Sir Wellington. All rights reserved.
 //
 
+import AromaSwiftClient
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    private let AROMA_TOKEN = "2b48275b-2ad2-47dd-96be-97b1a8c7cd26"
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        AromaClient.TOKEN_ID = AROMA_TOKEN
+        AromaClient.maxConcurrency = 1
+        
+        AromaClient.sendLowPriorityMessage(withTitle: "App Launched")
+        
+        NSSetUncaughtExceptionHandler() { ex in
+            
+            AromaClient.beginWithTitle("App Crashed")
+                .withPriority(.HIGH)
+                .addBody("\(ex)")
+                .send()
+        }
+        
+        
         return true
     }
 
@@ -39,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        AromaClient.sendLowPriorityMessage(withTitle: "App Terminated")
     }
 
 
