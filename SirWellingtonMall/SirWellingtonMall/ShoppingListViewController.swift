@@ -12,20 +12,39 @@ import UIKit
 
 class ShoppingListViewController: UITableViewController {
 
-    private var shoppingList: [GroceryItem] = Inventory.BASIC_INVETORY
+    private var shoppingList: [GroceryItem] = Products.BASIC_INVENTORY.map() {
+        product in
+        
+        let item = GroceryItem(product: product, note: "", amount: 1)
+        return item
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+
+//MARK: Segues
+extension ShoppingListViewController {
+    
+    private func segueToGroceryItem(item: GroceryItem) {
+        
+        self.performSegueWithIdentifier("ToProduct", sender: item.product)
     }
-
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destination = segue.destinationViewController
+        
+        if let groceryView = destination as? ProductViewController, product = sender as? Product {
+            groceryView.product = product
+        }
+    }
 }
 
 //MARK: Table View Data Methods
@@ -77,13 +96,10 @@ extension ShoppingListViewController {
     }
     
     private func populateCell(cell: GroceryItemCell, withItem item: GroceryItem, atIndexPath path: NSIndexPath) {
-        
-        if let imageName = item.imageName where !imageName.isEmpty {
-            cell.pictureImageView.image = UIImage(named: imageName)
-        }
-        
-        cell.nameLabel.text = item.name
-        cell.descriptionLabel.text = item.description
+       
+        cell.pictureImageView.image = item.product.getImage()
+        cell.nameLabel.text = item.product.name
+        cell.descriptionLabel.text = item.product.description
         
         self.addSwipeToDelete(toCell: cell, atIndexPath: path) { [weak self] deletedPath in
             
@@ -121,6 +137,21 @@ extension ShoppingListViewController {
         else {
             return 160
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let row = indexPath.row
+        
+        guard row >= 0 && row < shoppingList.count
+        else {
+            AromaClient.sendMediumPriorityMessage(withTitle: "Bad Logic", withBody: "Unexpected Row#: \(row)")
+            return
+        }
+        
+        let item = shoppingList[row]
+        
+        self.segueToGroceryItem(item)
     }
     
 }

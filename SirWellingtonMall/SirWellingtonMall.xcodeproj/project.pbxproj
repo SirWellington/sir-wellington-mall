@@ -16,9 +16,9 @@
 		DE3B72C41CE7864C00E968F8 /* SirWellingtonMallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72C31CE7864C00E968F8 /* SirWellingtonMallTests.swift */; };
 		DE3B72D01CE7964700E968F8 /* Didot.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DE3B72CF1CE7964700E968F8 /* Didot.ttc */; };
 		DE3B72D21CE79EB100E968F8 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D11CE79EB100E968F8 /* GroceryItem.swift */; };
-		DE3B72D41CE7A0C200E968F8 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D31CE7A0C200E968F8 /* InventoryViewController.swift */; };
-		DE3B72D61CE7A2FC00E968F8 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D51CE7A2FC00E968F8 /* Inventory.swift */; };
-		DE3B72D81CE7A4C700E968F8 /* GroceryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D71CE7A4C700E968F8 /* GroceryItemViewController.swift */; };
+		DE3B72D41CE7A0C200E968F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D31CE7A0C200E968F8 /* ProductListViewController.swift */; };
+		DE3B72D61CE7A2FC00E968F8 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D51CE7A2FC00E968F8 /* Products.swift */; };
+		DE3B72D81CE7A4C700E968F8 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */; };
 		DE3B72DA1CE7A53200E968F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72D91CE7A53200E968F8 /* Extensions.swift */; };
 		DE3B72DC1CE7A74500E968F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72DB1CE7A74500E968F8 /* Colors.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +49,9 @@
 		DE3B72C51CE7864C00E968F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3B72CF1CE7964700E968F8 /* Didot.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Didot.ttc; sourceTree = "<group>"; };
 		DE3B72D11CE79EB100E968F8 /* GroceryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
-		DE3B72D31CE7A0C200E968F8 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
-		DE3B72D51CE7A2FC00E968F8 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
-		DE3B72D71CE7A4C700E968F8 /* GroceryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemViewController.swift; sourceTree = "<group>"; };
+		DE3B72D31CE7A0C200E968F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		DE3B72D51CE7A2FC00E968F8 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DE3B72D91CE7A53200E968F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DE3B72DB1CE7A74500E968F8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,14 +106,12 @@
 		DE3B72AD1CE7864C00E968F8 /* SirWellingtonMall */ = {
 			isa = PBXGroup;
 			children = (
+				DE3B72DD1CE7C7D900E968F8 /* Products */,
 				DE3B72BA1CE7864C00E968F8 /* Info.plist */,
 				DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */,
 				DE3B72DB1CE7A74500E968F8 /* Colors.swift */,
 				DE3B72D91CE7A53200E968F8 /* Extensions.swift */,
 				DE3B72D11CE79EB100E968F8 /* GroceryItem.swift */,
-				DE3B72D71CE7A4C700E968F8 /* GroceryItemViewController.swift */,
-				DE3B72D51CE7A2FC00E968F8 /* Inventory.swift */,
-				DE3B72D31CE7A0C200E968F8 /* InventoryViewController.swift */,
 				DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */,
 				DE3B72B51CE7864C00E968F8 /* Assets.xcassets */,
 				DE3B72CE1CE7960E00E968F8 /* Fonts */,
@@ -138,6 +136,16 @@
 				DE3B72CF1CE7964700E968F8 /* Didot.ttc */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DE3B72DD1CE7C7D900E968F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE3B72D31CE7A0C200E968F8 /* ProductListViewController.swift */,
+				DE3B72D51CE7A2FC00E968F8 /* Products.swift */,
+				DE3B72D71CE7A4C700E968F8 /* ProductViewController.swift */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E1B2C865EBDCDA875F14E0FA /* Pods */ = {
@@ -304,9 +312,9 @@
 			files = (
 				DE3B72B11CE7864C00E968F8 /* ShoppingListViewController.swift in Sources */,
 				DE3B72DC1CE7A74500E968F8 /* Colors.swift in Sources */,
-				DE3B72D81CE7A4C700E968F8 /* GroceryItemViewController.swift in Sources */,
-				DE3B72D41CE7A0C200E968F8 /* InventoryViewController.swift in Sources */,
-				DE3B72D61CE7A2FC00E968F8 /* Inventory.swift in Sources */,
+				DE3B72D81CE7A4C700E968F8 /* ProductViewController.swift in Sources */,
+				DE3B72D41CE7A0C200E968F8 /* ProductListViewController.swift in Sources */,
+				DE3B72D61CE7A2FC00E968F8 /* Products.swift in Sources */,
 				DE3B72D21CE79EB100E968F8 /* GroceryItem.swift in Sources */,
 				DE3B72AF1CE7864C00E968F8 /* AppDelegate.swift in Sources */,
 				DE3B72DA1CE7A53200E968F8 /* Extensions.swift in Sources */,

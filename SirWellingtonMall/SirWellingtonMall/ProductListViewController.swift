@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 
-class InventoryViewController : UICollectionViewController {
+class ProductListViewController : UICollectionViewController {
     
     private var items: [GroceryItem] = []
     
@@ -28,7 +28,7 @@ class InventoryViewController : UICollectionViewController {
 }
 
 //MARK: Collection View Data Source Methods
-extension InventoryViewController {
+extension ProductListViewController {
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -54,7 +54,7 @@ extension InventoryViewController {
         
         let item = items[row]
         
-        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InventoryCell", forIndexPath: indexPath) as? InventoryCell
+        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InventoryCell", forIndexPath: indexPath) as? ProductCell
         else {
             AromaClient.beginWithTitle("Collection View Error")
                 .addBody("Failed to deque InventoryCell. Returning Empty cell.")
@@ -64,12 +64,12 @@ extension InventoryViewController {
             return emptyCell
         }
         
-        populateCell(cell, withItem: item)
+        populateCell(cell, withItem: item, atIndexPath: indexPath)
         
         return cell
     }
     
-    private func populateCell(cell: InventoryCell, withItem item: GroceryItem) {
+    private func populateCell(cell: ProductCell, withItem item: GroceryItem, atIndexPath path: NSIndexPath) {
         
     }
 
@@ -77,12 +77,12 @@ extension InventoryViewController {
 }
 
 //MARK: Collection View Delegate Methods
-extension InventoryViewController {
+extension ProductListViewController {
     
 }
 
 
-class InventoryCell: UICollectionViewCell {
+class ProductCell: UICollectionViewCell {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var name: UILabel!

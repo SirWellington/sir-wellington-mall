@@ -9,10 +9,16 @@
 import Foundation
 import UIKit
 
-struct GroceryItem {
+class GroceryItem {
     
-    var name: String
-    var description: String? = nil
-    var imageName: String? = nil
+    var product: Product
+    var note: String
+    var amount: Int = 1
+
     
+    init(product: Product, note: String, amount: Int) {
+        self.product = product
+        self.note = note
+        self.amount = amount
+    }
 }
