@@ -11,7 +11,9 @@ import UIKit
 
 struct GroceryItem {
     
-    var name: String? = nil
+    var name: String
     var description: String? = nil
-    var image: UIImage? = nil
+    var price: Double = 0.0
+    var imageName: String? = nil
+    
 }
