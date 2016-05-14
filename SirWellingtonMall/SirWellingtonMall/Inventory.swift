@@ -11,7 +11,7 @@ import Foundation
 //The Inventory contains all the Groceries used in the App
 class Inventory {
     
-    private var groceries: [GroceryItem] = [
+    private static let BASIC_INVETORY: [GroceryItem] = [
         GroceryItem(name: "Eggs", description: nil, price: 2.99, imageName: nil)
     ]
     
