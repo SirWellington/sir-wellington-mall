@@ -41,12 +41,12 @@ extension InventoryViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let row = indexPath.row
         
-        guard row > 0 && row < items.count
+        guard row >= 0 && row < items.count
         else {
             AromaClient.beginWithTitle("Bad Logic")
                 .withPriority(.MEDIUM)
                 .addBody("InventoryViewController").addLine()
-                .addBody("Incorrect Row: \(row)")
+                .addBody("Unexpected Row#: \(row)")
                 .send()
             
             return emptyCell

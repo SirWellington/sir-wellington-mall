@@ -37,8 +37,9 @@ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 #===============================
 
 #===============================
-# SLIDING TABLE CELLS
+# SLICK ANIMATIONS
 pod 'MCSwipeTableViewCell', '~> 2.1.4'
+pod 'LTMorphingLabel'
 #===============================
 
 end

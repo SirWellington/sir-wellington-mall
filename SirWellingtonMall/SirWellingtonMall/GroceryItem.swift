@@ -13,7 +13,6 @@ struct GroceryItem {
     
     var name: String
     var description: String? = nil
-    var price: Double = 0.0
     var imageName: String? = nil
     
 }

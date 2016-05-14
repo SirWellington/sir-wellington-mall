@@ -7,6 +7,7 @@
 //
 
 import AromaSwiftClient
+import MCSwipeTableViewCell
 import UIKit
 
 class ShoppingListViewController: UITableViewController {
@@ -52,11 +53,12 @@ extension ShoppingListViewController {
         
         let row = indexPath.row
         
-        guard row < shoppingList.count && row > 0
+        guard row >= 0 && row < shoppingList.count
         else {
             AromaClient.beginWithTitle("Bad Logic")
                 .withPriority(.HIGH)
-                .addBody("Attempting to row incorrect Row #\(row)")
+                .addBody("ShoppingListViewController").addLine()
+                .addBody("Unexpected Row #\(row)")
                 .send()
             
             return emptyCell
@@ -69,12 +71,12 @@ extension ShoppingListViewController {
             return emptyCell
         }
         
-        populateCell(cell, withItem: item)
+        populateCell(cell, withItem: item, atIndexPath: indexPath)
         
         return cell
     }
     
-    private func populateCell(cell: GroceryItemCell, withItem item: GroceryItem) {
+    private func populateCell(cell: GroceryItemCell, withItem item: GroceryItem, atIndexPath path: NSIndexPath) {
         
         if let imageName = item.imageName where !imageName.isEmpty {
             cell.pictureImageView.image = UIImage(named: imageName)
@@ -82,6 +84,23 @@ extension ShoppingListViewController {
         
         cell.nameLabel.text = item.name
         cell.descriptionLabel.text = item.description
+        
+        self.addSwipeToDelete(toCell: cell, atIndexPath: path) { [weak self] deletedPath in
+            
+            let row = deletedPath.row
+            
+            guard let `self` = self else { return }
+            
+            self.shoppingList.removeAtIndex(row)
+            
+            if !self.shoppingList.isEmpty {
+                self.tableView?.deleteRowsAtIndexPaths([deletedPath], withRowAnimation: .Automatic)
+            }
+            else {
+                self.tableView?.reloadRowsAtIndexPaths([deletedPath], withRowAnimation: .Automatic)
+            }
+        }
+        
     }
     
 }
@@ -100,13 +119,13 @@ extension ShoppingListViewController {
             return tableView.frame.height
         }
         else {
-            return 150
+            return 160
         }
     }
     
 }
 
-class GroceryItemCell : UITableViewCell {
+class GroceryItemCell : MCSwipeTableViewCell {
     
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

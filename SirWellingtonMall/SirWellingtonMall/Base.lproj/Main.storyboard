@@ -25,56 +25,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroceryItemCell" rowHeight="150" id="zjF-Yw-IIx" customClass="GroceryItemCell" customModule="SirWellingtonMall" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroceryItemCell" rowHeight="220" id="zjF-Yw-IIx" customClass="GroceryItemCell" customModule="SirWellingtonMall" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zjF-Yw-IIx" id="57L-fF-Qmw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Soy-Milk" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-mp-Lpj">
-                                            <rect key="frame" x="24" y="15" width="120" height="120"/>
+                                            <rect key="frame" x="24" y="8" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="BAw-mp-Lpj" secondAttribute="height" multiplier="1:1" id="lQo-2N-k6x"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6w-M4-pFz">
-                                            <rect key="frame" x="174" y="32" width="94" height="29"/>
+                                            <rect key="frame" x="182" y="32" width="94" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy Milk is really good for you." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRx-Oc-Evb">
-                                            <rect key="frame" x="174" y="69" width="180" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <rect key="frame" x="182" y="69" width="173" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bt-Wqi">
-                                            <rect key="frame" x="490" y="97" width="94" height="29"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-iQ-qq2">
-                                            <rect key="frame" x="532" y="59" width="11" height="22"/>
+                                            <rect key="frame" x="94" y="179" width="11" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-Bt-Wqi">
+                                            <rect key="frame" x="490" y="175" width="94" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </stepper>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="OJb-Bt-Wqi" secondAttribute="bottom" constant="16" id="DTa-1G-Nwa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OJb-Bt-Wqi" secondAttribute="trailing" constant="8" id="0ga-E2-plf"/>
+                                        <constraint firstItem="OJb-Bt-Wqi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KRx-Oc-Evb" secondAttribute="bottom" constant="8" id="75i-zN-m1a"/>
+                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="top" secondItem="57L-fF-Qmw" secondAttribute="topMargin" id="Co1-Au-4Rb"/>
                                         <constraint firstItem="KRx-Oc-Evb" firstAttribute="top" secondItem="V6w-M4-pFz" secondAttribute="bottom" constant="8" id="Ec2-Yt-kJn"/>
                                         <constraint firstItem="BAw-mp-Lpj" firstAttribute="leading" secondItem="57L-fF-Qmw" secondAttribute="leadingMargin" constant="16" id="HKS-M9-L9U"/>
-                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="centerY" secondItem="57L-fF-Qmw" secondAttribute="centerY" id="KVh-7U-KOi"/>
+                                        <constraint firstItem="Mdb-iQ-qq2" firstAttribute="centerY" secondItem="OJb-Bt-Wqi" secondAttribute="centerY" id="Hvb-QG-Xgz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OJb-Bt-Wqi" secondAttribute="bottom" constant="8" id="QFk-Gc-mx8"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KRx-Oc-Evb" secondAttribute="trailing" id="S0g-UQ-0d6"/>
+                                        <constraint firstItem="Mdb-iQ-qq2" firstAttribute="centerX" secondItem="BAw-mp-Lpj" secondAttribute="centerX" id="Z33-eW-2ny"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="V6w-M4-pFz" secondAttribute="trailing" id="bat-yq-hGB"/>
-                                        <constraint firstItem="OJb-Bt-Wqi" firstAttribute="top" secondItem="Mdb-iQ-qq2" secondAttribute="bottom" constant="16" id="eWD-9G-yBq"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OJb-Bt-Wqi" secondAttribute="trailing" constant="8" id="gCC-JD-ayM"/>
                                         <constraint firstItem="KRx-Oc-Evb" firstAttribute="leading" secondItem="V6w-M4-pFz" secondAttribute="leading" id="ih4-jL-SL0"/>
-                                        <constraint firstItem="Mdb-iQ-qq2" firstAttribute="centerX" secondItem="OJb-Bt-Wqi" secondAttribute="centerX" id="j1m-G4-N1P"/>
-                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="height" secondItem="57L-fF-Qmw" secondAttribute="height" multiplier="0.8" id="p2m-3T-44A"/>
-                                        <constraint firstItem="V6w-M4-pFz" firstAttribute="leading" secondItem="BAw-mp-Lpj" secondAttribute="trailing" constant="30" id="s3e-Vn-nFI"/>
+                                        <constraint firstItem="BAw-mp-Lpj" firstAttribute="width" secondItem="57L-fF-Qmw" secondAttribute="width" multiplier="0.25" id="kCE-Q8-B4c"/>
+                                        <constraint firstItem="V6w-M4-pFz" firstAttribute="leading" secondItem="BAw-mp-Lpj" secondAttribute="trailing" constant="8" id="s3e-Vn-nFI"/>
                                         <constraint firstItem="V6w-M4-pFz" firstAttribute="top" secondItem="57L-fF-Qmw" secondAttribute="topMargin" constant="24" id="t5U-YV-My9"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -87,7 +88,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyCell" rowHeight="150" id="gzA-Nx-Rzn">
-                                <rect key="frame" x="0.0" y="178" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="248" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gzA-Nx-Rzn" id="37k-X6-RR7">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
@@ -289,7 +290,7 @@
     <resources>
         <image name="Add" width="40" height="40"/>
         <image name="Checklist" width="40" height="40"/>
-        <image name="Soy-Milk" width="261" height="193"/>
+        <image name="Soy-Milk" width="2448" height="3264"/>
         <image name="Tap-This-Button" width="200" height="200"/>
     </resources>
 </document>
