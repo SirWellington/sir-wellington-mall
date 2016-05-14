@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Cart@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.1852291,48 L75.3460741,48 C76.1858296,48 76.6947307,48.4483302 76.4837437,48.9987461 L69.1996458,68.0012539 C68.9882079,68.5528461 68.3350496,69 67.7479288,69 L31.7833744,69 C31.1930513,69 30.5426445,68.5516698 30.3316574,68.0012539 L23.0475596,48.9987461 C22.8361216,48.4471539 23.3500292,48 24.1852291,48 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="53.5314245" height="21" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <pattern id="pattern-3" width="4.8" height="4.8" x="18.2" y="43.2" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-4" transform="scale(0.1,0.1)"></use>
+        </pattern>
+        <image id="image-4" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXt2O0NgjAQBmBrt4DoDiawEHEQB1F3MK7BHKxR+2oKQfnseXCX0B/SEr3zucZIz+R57nZ+OOfuZVmeMcWaOEyWZVdjTBHicMW3aZpekMQnOyVJcqiq6hmSUq6Ig3iIyxnf+iRH7iSc8e1SleJCWGyvZsQboBlRA7QiWgCNiB+ANkQnQBOiF6AFMQjQgBgFSEdMAkhGTAZIRcwCSETMBkhDRAEkIaIBUhAkgAQEGbA2AgCDL0Edax2KrO8e3JCcCsDn10CgK/HQ2I0IZ+w9KucXBfo4mGJNHA79JfSBQhzO+FtfKFS567rEb2LrC3VV/vse507Uf2ScSQDiil8DOJOEHeFAtAAaET8AbYhOgCZEL0ALYhCgATEKkI6YBJCMmAyQipgFkIiYDZCGiAJIQkQDpCBIAAkIMmBtBAD/OMizPe+jQBh9j+JbX+hTn+a1r1K437wrfvYd/wV+UgblD/bGFgAAAABJRU5ErkJggg=="></image>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cart">
+            <circle id="Oval-1" fill="#1B2021" cx="41" cy="73" r="3"></circle>
+            <circle id="Oval-1-Copy" fill="#1B2021" cx="58" cy="73" r="3"></circle>
+            <use id="Rectangle-12" stroke="#1B2021" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" fill="url(#pattern-3)" xlink:href="#path-1"></use>
+            <path d="M74.5947464,50.0000009 C74.5947464,50.0000009 34.5271534,7.34414251 87.5059256,41.9805542" id="Path-7" stroke="#1B2021" stroke-width="2" stroke-linecap="square"></path>
+            <path id="Path-6" stroke="#1B2021" stroke-width="2" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
