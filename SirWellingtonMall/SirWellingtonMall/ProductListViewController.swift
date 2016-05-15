@@ -36,7 +36,6 @@ extension ProductListViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let destination = segue.destinationViewController
     }
     
     private func unwind() {
@@ -59,6 +58,8 @@ extension ProductListViewController {
     private func onProductAdded(newProduct: Product) {
         self.products.append(newProduct)
         self.collectionView?.reloadData()
+        
+        AromaClient.sendMediumPriorityMessage(withTitle: "Product Added", withBody: "\(newProduct)")
     }
 }
 

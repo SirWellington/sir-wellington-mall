@@ -23,6 +23,8 @@ class AddProduct1ViewController : UIViewController {
         
         self.hideNavigationBarShadow()
         productNameField.becomeFirstResponder()
+        
+        AromaClient.sendLowPriorityMessage(withTitle: "Add Product Initiated")
     }
     
     
