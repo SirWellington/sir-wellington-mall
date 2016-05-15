@@ -41,7 +41,7 @@
 		5B9F7F20034B047FB24E5C3F /* Pods-SirWellingtonMall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMall.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall.debug.xcconfig"; sourceTree = "<group>"; };
 		7F2EB9B7333C2CFBA51895BC /* Pods-SirWellingtonMall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMall.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall.release.xcconfig"; sourceTree = "<group>"; };
 		8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SirWellingtonMall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE3B72AB1CE7864C00E968F8 /* SirWellingtonMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SirWellingtonMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3B72AB1CE7864C00E968F8 /* SW Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SW Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		DE3B72B31CE7864C00E968F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		DE3B72AC1CE7864C00E968F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE3B72AB1CE7864C00E968F8 /* SirWellingtonMall.app */,
+				DE3B72AB1CE7864C00E968F8 /* SW Mall.app */,
 				DE3B72BF1CE7864C00E968F8 /* SirWellingtonMallTests.xctest */,
 			);
 			name = Products;
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE3B72AA1CE7864C00E968F8 /* SirWellingtonMall */ = {
+		DE3B72AA1CE7864C00E968F8 /* SW Mall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE3B72C81CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SirWellingtonMall" */;
+			buildConfigurationList = DE3B72C81CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SW Mall" */;
 			buildPhases = (
 				81ED49D35FE335EB1DE90552 /* Check Pods Manifest.lock */,
 				DE3B72A71CE7864C00E968F8 /* Sources */,
@@ -187,9 +187,9 @@
 			);
 			dependencies = (
 			);
-			name = SirWellingtonMall;
+			name = "SW Mall";
 			productName = SirWellingtonMall;
-			productReference = DE3B72AB1CE7864C00E968F8 /* SirWellingtonMall.app */;
+			productReference = DE3B72AB1CE7864C00E968F8 /* SW Mall.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE3B72BE1CE7864C00E968F8 /* SirWellingtonMallTests */ = {
@@ -242,7 +242,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE3B72AA1CE7864C00E968F8 /* SirWellingtonMall */,
+				DE3B72AA1CE7864C00E968F8 /* SW Mall */,
 				DE3B72BE1CE7864C00E968F8 /* SirWellingtonMallTests */,
 			);
 		};
@@ -350,7 +350,7 @@
 /* Begin PBXTargetDependency section */
 		DE3B72C11CE7864C00E968F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DE3B72AA1CE7864C00E968F8 /* SirWellingtonMall */;
+			target = DE3B72AA1CE7864C00E968F8 /* SW Mall */;
 			targetProxy = DE3B72C01CE7864C00E968F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE3B72C81CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SirWellingtonMall" */ = {
+		DE3B72C81CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SW Mall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE3B72C91CE7864C00E968F8 /* Debug */,
