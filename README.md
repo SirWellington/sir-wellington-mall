@@ -39,7 +39,7 @@ Follow the guide to add your very own **SW** Merchandise 😎.
 + Due to time constraints, this App does not persist, and so the Application state  resets every time the App Launches.
 
 + Because Products and Images are stored in-memory, if you add too many items and products in the App, it will
-eventually crash.
+eventually run out of memory.
 
 ## Aroma
 
