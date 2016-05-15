@@ -201,7 +201,8 @@ extension ShoppingListViewController {
     private func checkCell(cell: GroceryItemCell) {
         
         let animations = {
-            cell.contentView.backgroundColor = Colors.LIGHT_GRAY
+//            cell.contentView.backgroundColor = Colors.LIGHT_GRAY
+            cell.groceryCover.hidden = false
         }
         
         UIView.transitionWithView(cell.contentView, duration: 0.4, options: .TransitionCrossDissolve, animations: animations, completion: nil)
@@ -211,7 +212,8 @@ extension ShoppingListViewController {
     private func uncheckCell(cell: GroceryItemCell) {
         
         let animations = {
-            cell.contentView.backgroundColor = Colors.WHITE
+//            cell.contentView.backgroundColor = Colors.WHITE
+            cell.groceryCover.hidden = true
         }
         
         UIView.transitionWithView(cell.contentView, duration: 0.4, options: .TransitionCrossDissolve, animations: animations, completion: nil)
@@ -264,6 +266,8 @@ class GroceryItemCell : MCSwipeTableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var amountStepper: UIStepper!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var groceryCover: UIView!
+    
     
     var stepperDelegate: ((UIStepper) -> Void)?
     
