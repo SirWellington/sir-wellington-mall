@@ -23,7 +23,7 @@ state.
 
 ## Adding Items to the List
 To add items to your Grocery List, simply click the `+` icon on the top-right,
-and then select the Product you want to ad..
+and then select the Product you want to add.
 
 ## Adding Custom Products
 To add a custom product, hit the `+` button from the Grocery List,
@@ -34,9 +34,9 @@ Follow the guide to add your very own **SW** Merchandise 😎.
 
 # Caveats
 
-+ This App was tested and designed on an iPhone 6, so it may look sub-optimal on othere devices.
++ This App was tested and designed on an iPhone 6, so it may look sub-optimal on other devices.
 
-+ Due to time constraints, this App does not persist, and so the Application state it reset on each launch.
++ Due to time constraints, this App does not persist, and so the Application state  resets every time the App Launches.
 
 + Because Products and Images are stored in-memory, if you add too many items and products in the App, it will
 eventually crash.
