@@ -14,6 +14,7 @@ class GroceryItem {
     var product: Product
     var note: String
     var amount: Int = 1
+    var checked: Bool = false
 
     
     init(product: Product, note: String, amount: Int) {

@@ -163,12 +163,13 @@ extension UITableViewController {
     }
     
     private var trashIcon: UIImage? { return UIImage(named: "Trash") }
+    private var checkMarkIcon: UIImage? { return UIImage(named: "Checkmark") }
 
     typealias OnSwipe = (NSIndexPath) -> Void
 
     func addSwipeToDelete(toCell cell: MCSwipeTableViewCell, atIndexPath path: NSIndexPath, onSwipe: OnSwipe) {
        
-        cell.defaultColor = UIColor.yellowColor()
+        cell.defaultColor = Colors.PRIMARY
 
         let view = UIImageView()
         
@@ -178,18 +179,34 @@ extension UITableViewController {
         
         view.contentMode = .Center
 
-        cell.setSwipeGestureWithView(view, color: Colors.PRIMARY, mode: .Exit, state: .State1) { [weak self] cell, state, mode in
+        cell.setSwipeGestureWithView(view, color: UIColor.redColor(), mode: .Exit, state: .State3) { [weak self] cell, state, mode in
 
             guard let path = self?.tableView?.indexPathForCell(cell) else { return }
             onSwipe(path)
         }
 
-        cell.setSwipeGestureWithView(view, color: Colors.PRIMARY, mode: .Exit, state: .State3) { [weak self] cell, state, mode in
+        cell.firstTrigger = 0.35
+    }
+    
+    func addSwipeToToggle(toCell cell: MCSwipeTableViewCell, atIndexPath path: NSIndexPath, onSwipe: OnSwipe) {
+        
+        cell.defaultColor = Colors.PRIMARY
+        
+        let view = UIImageView()
+        
+        if let icon = checkMarkIcon {
+            view.image = icon
+        }
+        
+        view.contentMode = .Center
 
+        
+        cell.setSwipeGestureWithView(view, color: Colors.BLUE, mode: .Switch, state: .State1) { [weak self] cell, state, mode in
+            
             guard let path = self?.tableView?.indexPathForCell(cell) else { return }
             onSwipe(path)
         }
-
+        
         cell.firstTrigger = 0.35
     }
 }

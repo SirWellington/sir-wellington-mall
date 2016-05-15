@@ -139,6 +139,13 @@ extension ShoppingListViewController {
         cell.amountLabel.text = "\(item.amount)"
         cell.amountStepper.value = Double(item.amount)
         
+        if item.checked {
+            checkCell(cell)
+        }
+        else {
+            uncheckCell(cell)
+        }
+        
         cell.stepperDelegate = { [unowned cell] stepper in
             
             let newValue = stepper.value
@@ -163,6 +170,51 @@ extension ShoppingListViewController {
                 self.tableView?.reloadRowsAtIndexPaths([deletedPath], withRowAnimation: .Automatic)
             }
         }
+        
+        self.addSwipeToToggle(toCell: cell, atIndexPath: path) { [weak self] toggledPath in
+            
+            guard let `self` = self else { return }
+            
+            let row = toggledPath.row
+            
+            guard row >= 0 && row < self.shoppingList.count
+            else {
+                AromaClient.sendHighPriorityMessage(withTitle: "Logic Error", withBody: "Unexpected Row #\(row)")
+                return
+            }
+            
+            let item = self.shoppingList[row]
+            
+            item.checked = !item.checked
+            
+            if item.checked {
+                self.checkCell(cell)
+            }
+            else {
+                self.uncheckCell(cell)
+            }
+            
+        }
+        
+    }
+    
+    private func checkCell(cell: GroceryItemCell) {
+        
+        let animations = {
+            cell.contentView.backgroundColor = Colors.LIGHT_GRAY
+        }
+        
+        UIView.transitionWithView(cell.contentView, duration: 0.4, options: .TransitionCrossDissolve, animations: animations, completion: nil)
+        
+    }
+    
+    private func uncheckCell(cell: GroceryItemCell) {
+        
+        let animations = {
+            cell.contentView.backgroundColor = Colors.WHITE
+        }
+        
+        UIView.transitionWithView(cell.contentView, duration: 0.4, options: .TransitionCrossDissolve, animations: animations, completion: nil)
         
     }
     

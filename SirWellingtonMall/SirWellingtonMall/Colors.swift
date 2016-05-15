@@ -18,6 +18,7 @@ class Colors {
     static let BLUE = Colors.fromRGB(red: 3, green: 122, blue: 255)
     static let GREEN = Colors.fromRGB(red: 0, green: 166, blue: 118)
     static let MAROON = Colors.fromRGB(red: 100, green: 6, blue: 17)
+    static let RED = Colors.fromRGB(red: 208, green: 2, blue: 27)
     static let PINK = Colors.fromRGB(red: 255, green: 0, blue: 122)
     static let TURQUOISE = Colors.fromRGB(red: 10, green: 175, blue: 190)
     static let YELLOW = Colors.fromRGB(red: 248, green: 231, blue: 28)

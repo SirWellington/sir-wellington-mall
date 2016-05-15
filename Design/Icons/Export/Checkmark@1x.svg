@@ -5,8 +5,8 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Checkmark" stroke-width="5" stroke="#1B2021">
-            <polyline id="Rectangle-6" points="76 21 38.812054 65.2605698 24 51.8018759"></polyline>
+        <g id="Checkmark" stroke-width="12" stroke="#1B2021">
+            <polyline id="Rectangle-6" points="76 25 38.812054 69.2605698 24 55.8018759"></polyline>
         </g>
     </g>
 </svg>
