@@ -12,12 +12,19 @@ import UIKit
 
 class ShoppingListViewController: UITableViewController {
 
-    private var shoppingList: [GroceryItem] = Products.BASIC_INVENTORY.map() {
-        product in
+    private var shoppingList: [GroceryItem] =  {
         
-        let item = GroceryItem(product: product, note: "", amount: 1)
-        return item
-    }
+        let random = Int.random(from: 0, to: 10)
+        
+        if random.isEven() {
+            return Products.BASIC_INVENTORY.map() {
+                return GroceryItem(product: $0, note: "", amount: 1)
+            }
+        }
+        else {
+            return []
+        }
+    }()
     
     
     override func viewDidLoad() {
