@@ -7,6 +7,7 @@
 //
 
 import AromaSwiftClient
+import LTMorphingLabel
 import MCSwipeTableViewCell
 import UIKit
 
@@ -143,6 +144,7 @@ extension ShoppingListViewController {
         cell.pictureImageView.image = item.product.getImage()
         cell.nameLabel.text = item.product.name
         cell.descriptionLabel.text = item.product.description
+        cell.amountLabel.morphingEffect = .Scale
         cell.amountLabel.text = "\(item.amount)"
         cell.amountStepper.value = Double(item.amount)
         
@@ -176,6 +178,7 @@ extension ShoppingListViewController {
             else {
                 self.tableView?.reloadRowsAtIndexPaths([deletedPath], withRowAnimation: .Automatic)
             }
+            
         }
         
         self.addSwipeToToggle(toCell: cell, atIndexPath: path) { [weak self] toggledPath in
@@ -200,6 +203,8 @@ extension ShoppingListViewController {
             else {
                 self.uncheckCell(cell)
             }
+            
+            self.tableView.deselectRowAtIndexPath(toggledPath, animated: true)
             
         }
         
@@ -270,7 +275,7 @@ class GroceryItemCell : MCSwipeTableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var amountStepper: UIStepper!
-    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var amountLabel: LTMorphingLabel!
     @IBOutlet weak var groceryCover: UIView!
     
     
