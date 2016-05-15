@@ -208,7 +208,6 @@ extension ShoppingListViewController {
     private func checkCell(cell: GroceryItemCell) {
         
         let animations = {
-//            cell.contentView.backgroundColor = Colors.LIGHT_GRAY
             cell.groceryCover.hidden = false
         }
         
@@ -219,7 +218,6 @@ extension ShoppingListViewController {
     private func uncheckCell(cell: GroceryItemCell) {
         
         let animations = {
-//            cell.contentView.backgroundColor = Colors.WHITE
             cell.groceryCover.hidden = true
         }
         
