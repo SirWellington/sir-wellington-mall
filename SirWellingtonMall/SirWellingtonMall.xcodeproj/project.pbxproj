@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6693A1494BBC9DEF183CF3C2 /* Pods_SW_Mall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98530499E336B0BEA75FE2 /* Pods_SW_Mall.framework */; };
+		8AA9488FB76CB5F682C8D02A /* Pods_SirWellingtonMallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8F503DFE4258ACAA2EB008 /* Pods_SirWellingtonMallTests.framework */; };
 		8F96E4750E9C85F8F990160D /* Pods_SirWellingtonMall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */; };
 		DE3B72AF1CE7864C00E968F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */; };
 		DE3B72B11CE7864C00E968F8 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */; };
@@ -38,9 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C7F7C25518B0F8CFAFF091 /* Pods-SirWellingtonMallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMallTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMallTests/Pods-SirWellingtonMallTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B98530499E336B0BEA75FE2 /* Pods_SW_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SW_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F7F20034B047FB24E5C3F /* Pods-SirWellingtonMall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMall.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall.debug.xcconfig"; sourceTree = "<group>"; };
+		7367409AF55B454D386E0C4C /* Pods-SW Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SW Mall.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SW Mall/Pods-SW Mall.debug.xcconfig"; sourceTree = "<group>"; };
+		7C8F503DFE4258ACAA2EB008 /* Pods_SirWellingtonMallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SirWellingtonMallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2EB9B7333C2CFBA51895BC /* Pods-SirWellingtonMall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMall.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall.release.xcconfig"; sourceTree = "<group>"; };
 		8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SirWellingtonMall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9801EF210D5B48F6FB83CA5A /* Pods-SirWellingtonMallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirWellingtonMallTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SirWellingtonMallTests/Pods-SirWellingtonMallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98B78C46631FF7763F0CE91A /* Pods-SW Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SW Mall.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SW Mall/Pods-SW Mall.release.xcconfig"; sourceTree = "<group>"; };
 		DE3B72AB1CE7864C00E968F8 /* SW Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SW Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3B72AE1CE7864C00E968F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3B72B01CE7864C00E968F8 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F96E4750E9C85F8F990160D /* Pods_SirWellingtonMall.framework in Frameworks */,
+				6693A1494BBC9DEF183CF3C2 /* Pods_SW_Mall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA9488FB76CB5F682C8D02A /* Pods_SirWellingtonMallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				8712A45C376FAE36895CECDA /* Pods_SirWellingtonMall.framework */,
+				4B98530499E336B0BEA75FE2 /* Pods_SW_Mall.framework */,
+				7C8F503DFE4258ACAA2EB008 /* Pods_SirWellingtonMallTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +177,10 @@
 			children = (
 				5B9F7F20034B047FB24E5C3F /* Pods-SirWellingtonMall.debug.xcconfig */,
 				7F2EB9B7333C2CFBA51895BC /* Pods-SirWellingtonMall.release.xcconfig */,
+				7367409AF55B454D386E0C4C /* Pods-SW Mall.debug.xcconfig */,
+				98B78C46631FF7763F0CE91A /* Pods-SW Mall.release.xcconfig */,
+				9801EF210D5B48F6FB83CA5A /* Pods-SirWellingtonMallTests.debug.xcconfig */,
+				23C7F7C25518B0F8CFAFF091 /* Pods-SirWellingtonMallTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -176,12 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE3B72C81CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SW Mall" */;
 			buildPhases = (
-				81ED49D35FE335EB1DE90552 /* Check Pods Manifest.lock */,
+				81ED49D35FE335EB1DE90552 /* [CP] Check Pods Manifest.lock */,
 				DE3B72A71CE7864C00E968F8 /* Sources */,
 				DE3B72A81CE7864C00E968F8 /* Frameworks */,
 				DE3B72A91CE7864C00E968F8 /* Resources */,
-				26BC2A05BB3E66549A5B10F9 /* Embed Pods Frameworks */,
-				81B17AF4E764FF988BC87D39 /* Copy Pods Resources */,
+				26BC2A05BB3E66549A5B10F9 /* [CP] Embed Pods Frameworks */,
+				81B17AF4E764FF988BC87D39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE3B72CB1CE7864C00E968F8 /* Build configuration list for PBXNativeTarget "SirWellingtonMallTests" */;
 			buildPhases = (
+				E91C176608FDB61EAEE30342 /* [CP] Check Pods Manifest.lock */,
 				DE3B72BB1CE7864C00E968F8 /* Sources */,
 				DE3B72BC1CE7864C00E968F8 /* Frameworks */,
 				DE3B72BD1CE7864C00E968F8 /* Resources */,
+				7C55D36889BF66F73203F859 /* [CP] Embed Pods Frameworks */,
+				5F12755850C4E1C1AF80D518 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,44 +290,89 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		26BC2A05BB3E66549A5B10F9 /* Embed Pods Frameworks */ = {
+		26BC2A05BB3E66549A5B10F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SW Mall/Pods-SW Mall-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		81B17AF4E764FF988BC87D39 /* Copy Pods Resources */ = {
+		5F12755850C4E1C1AF80D518 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SirWellingtonMall/Pods-SirWellingtonMall-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SirWellingtonMallTests/Pods-SirWellingtonMallTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		81ED49D35FE335EB1DE90552 /* Check Pods Manifest.lock */ = {
+		7C55D36889BF66F73203F859 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SirWellingtonMallTests/Pods-SirWellingtonMallTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81B17AF4E764FF988BC87D39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SW Mall/Pods-SW Mall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81ED49D35FE335EB1DE90552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E91C176608FDB61EAEE30342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +526,7 @@
 		};
 		DE3B72C91CE7864C00E968F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9F7F20034B047FB24E5C3F /* Pods-SirWellingtonMall.debug.xcconfig */;
+			baseConfigurationReference = 7367409AF55B454D386E0C4C /* Pods-SW Mall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SirWellingtonMall/Info.plist;
@@ -475,7 +539,7 @@
 		};
 		DE3B72CA1CE7864C00E968F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F2EB9B7333C2CFBA51895BC /* Pods-SirWellingtonMall.release.xcconfig */;
+			baseConfigurationReference = 98B78C46631FF7763F0CE91A /* Pods-SW Mall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SirWellingtonMall/Info.plist;
@@ -488,6 +552,7 @@
 		};
 		DE3B72CC1CE7864C00E968F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9801EF210D5B48F6FB83CA5A /* Pods-SirWellingtonMallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SirWellingtonMallTests/Info.plist;
@@ -500,6 +565,7 @@
 		};
 		DE3B72CD1CE7864C00E968F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C7F7C25518B0F8CFAFF091 /* Pods-SirWellingtonMallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SirWellingtonMallTests/Info.plist;

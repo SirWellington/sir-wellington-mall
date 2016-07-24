@@ -1,1 +1,0 @@
-../../../ThriftLib/lib/cocoa/src/TBaseClient.h

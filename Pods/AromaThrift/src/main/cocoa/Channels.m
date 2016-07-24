@@ -24,6 +24,867 @@
 
 #import "Channels.h"
 
+@implementation AromaChannels_IOSDevice
+
+- (id) init
+{
+  self = [super init];
+#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
+#endif
+  return self;
+}
+
+- (id) initWithDeviceToken: (NSData *) deviceToken
+{
+  self = [super init];
+  __deviceToken = [deviceToken retain_stub];
+  __deviceToken_isset = YES;
+  return self;
+}
+
+- (id) initWithCoder: (NSCoder *) decoder
+{
+  self = [super init];
+  if ([decoder containsValueForKey: @"deviceToken"])
+  {
+    __deviceToken = [[decoder decodeObjectForKey: @"deviceToken"] retain_stub];
+    __deviceToken_isset = YES;
+  }
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *) encoder
+{
+  if (__deviceToken_isset)
+  {
+    [encoder encodeObject: __deviceToken forKey: @"deviceToken"];
+  }
+}
+
+- (NSUInteger) hash
+{
+  NSUInteger hash = 17;
+  hash = (hash * 31) ^ __deviceToken_isset ? 2654435761 : 0;
+  if (__deviceToken_isset)
+  {
+    hash = (hash * 31) ^ [__deviceToken hash];
+  }
+  return hash;
+}
+
+- (BOOL) isEqual: (id) anObject
+{
+  if (self == anObject) {
+    return YES;
+  }
+  if (![anObject isKindOfClass:[AromaChannels_IOSDevice class]]) {
+    return NO;
+  }
+  AromaChannels_IOSDevice *other = (AromaChannels_IOSDevice *)anObject;
+  if ((__deviceToken_isset != other->__deviceToken_isset) ||
+      (__deviceToken_isset && ((__deviceToken || other->__deviceToken) && ![__deviceToken isEqual:other->__deviceToken]))) {
+    return NO;
+  }
+  return YES;
+}
+
+- (void) dealloc
+{
+  [__deviceToken release_stub];
+  [super dealloc_stub];
+}
+
+- (NSData *) deviceToken {
+  return [[__deviceToken retain_stub] autorelease_stub];
+}
+
+- (void) setDeviceToken: (NSData *) deviceToken {
+  [deviceToken retain_stub];
+  [__deviceToken release_stub];
+  __deviceToken = deviceToken;
+  __deviceToken_isset = YES;
+}
+
+- (BOOL) deviceTokenIsSet {
+  return __deviceToken_isset;
+}
+
+- (void) unsetDeviceToken {
+  [__deviceToken release_stub];
+  __deviceToken = nil;
+  __deviceToken_isset = NO;
+}
+
+- (void) read: (id <TProtocol>) inProtocol
+{
+  NSString * fieldName;
+  int fieldType;
+  int fieldID;
+
+  [inProtocol readStructBeginReturningName: NULL];
+  while (true)
+  {
+    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
+    if (fieldType == TType_STOP) { 
+      break;
+    }
+    switch (fieldID)
+    {
+      case 1:
+        if (fieldType == TType_STRING) {
+          NSData * fieldValue = [inProtocol readBinary];
+          [self setDeviceToken: fieldValue];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      default:
+        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        break;
+    }
+    [inProtocol readFieldEnd];
+  }
+  [inProtocol readStructEnd];
+}
+
+- (void) write: (id <TProtocol>) outProtocol {
+  [outProtocol writeStructBeginWithName: @"IOSDevice"];
+  if (__deviceToken_isset) {
+    if (__deviceToken != nil) {
+      [outProtocol writeFieldBeginWithName: @"deviceToken" type: TType_STRING fieldID: 1];
+      [outProtocol writeBinary: __deviceToken];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  [outProtocol writeFieldStop];
+  [outProtocol writeStructEnd];
+}
+
+- (void) validate {
+  // check for required fields
+}
+
+- (NSString *) description {
+  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_IOSDevice("];
+  [ms appendString: @"deviceToken:"];
+  [ms appendFormat: @"\"%@\"", __deviceToken];
+  [ms appendString: @")"];
+  return [NSString stringWithString: ms];
+}
+
+@end
+
+@implementation AromaChannels_AndroidDevice
+
+- (id) init
+{
+  self = [super init];
+#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
+#endif
+  return self;
+}
+
+- (id) initWithRegistrationId: (NSString *) registrationId
+{
+  self = [super init];
+  __registrationId = [registrationId retain_stub];
+  __registrationId_isset = YES;
+  return self;
+}
+
+- (id) initWithCoder: (NSCoder *) decoder
+{
+  self = [super init];
+  if ([decoder containsValueForKey: @"registrationId"])
+  {
+    __registrationId = [[decoder decodeObjectForKey: @"registrationId"] retain_stub];
+    __registrationId_isset = YES;
+  }
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *) encoder
+{
+  if (__registrationId_isset)
+  {
+    [encoder encodeObject: __registrationId forKey: @"registrationId"];
+  }
+}
+
+- (NSUInteger) hash
+{
+  NSUInteger hash = 17;
+  hash = (hash * 31) ^ __registrationId_isset ? 2654435761 : 0;
+  if (__registrationId_isset)
+  {
+    hash = (hash * 31) ^ [__registrationId hash];
+  }
+  return hash;
+}
+
+- (BOOL) isEqual: (id) anObject
+{
+  if (self == anObject) {
+    return YES;
+  }
+  if (![anObject isKindOfClass:[AromaChannels_AndroidDevice class]]) {
+    return NO;
+  }
+  AromaChannels_AndroidDevice *other = (AromaChannels_AndroidDevice *)anObject;
+  if ((__registrationId_isset != other->__registrationId_isset) ||
+      (__registrationId_isset && ((__registrationId || other->__registrationId) && ![__registrationId isEqual:other->__registrationId]))) {
+    return NO;
+  }
+  return YES;
+}
+
+- (void) dealloc
+{
+  [__registrationId release_stub];
+  [super dealloc_stub];
+}
+
+- (NSString *) registrationId {
+  return [[__registrationId retain_stub] autorelease_stub];
+}
+
+- (void) setRegistrationId: (NSString *) registrationId {
+  [registrationId retain_stub];
+  [__registrationId release_stub];
+  __registrationId = registrationId;
+  __registrationId_isset = YES;
+}
+
+- (BOOL) registrationIdIsSet {
+  return __registrationId_isset;
+}
+
+- (void) unsetRegistrationId {
+  [__registrationId release_stub];
+  __registrationId = nil;
+  __registrationId_isset = NO;
+}
+
+- (void) read: (id <TProtocol>) inProtocol
+{
+  NSString * fieldName;
+  int fieldType;
+  int fieldID;
+
+  [inProtocol readStructBeginReturningName: NULL];
+  while (true)
+  {
+    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
+    if (fieldType == TType_STOP) { 
+      break;
+    }
+    switch (fieldID)
+    {
+      case 1:
+        if (fieldType == TType_STRING) {
+          NSString * fieldValue = [inProtocol readString];
+          [self setRegistrationId: fieldValue];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      default:
+        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        break;
+    }
+    [inProtocol readFieldEnd];
+  }
+  [inProtocol readStructEnd];
+}
+
+- (void) write: (id <TProtocol>) outProtocol {
+  [outProtocol writeStructBeginWithName: @"AndroidDevice"];
+  if (__registrationId_isset) {
+    if (__registrationId != nil) {
+      [outProtocol writeFieldBeginWithName: @"registrationId" type: TType_STRING fieldID: 1];
+      [outProtocol writeString: __registrationId];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  [outProtocol writeFieldStop];
+  [outProtocol writeStructEnd];
+}
+
+- (void) validate {
+  // check for required fields
+}
+
+- (NSString *) description {
+  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_AndroidDevice("];
+  [ms appendString: @"registrationId:"];
+  [ms appendFormat: @"\"%@\"", __registrationId];
+  [ms appendString: @")"];
+  return [NSString stringWithString: ms];
+}
+
+@end
+
+@implementation AromaChannels_WindowsPhoneDevice
+
+- (id) init
+{
+  self = [super init];
+  return self;
+}
+
+- (id) initWithCoder: (NSCoder *) decoder
+{
+  self = [super init];
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *) encoder
+{
+}
+
+- (NSUInteger) hash
+{
+  NSUInteger hash = 17;
+  return hash;
+}
+
+- (BOOL) isEqual: (id) anObject
+{
+  if (self == anObject) {
+    return YES;
+  }
+  if (![anObject isKindOfClass:[AromaChannels_WindowsPhoneDevice class]]) {
+    return NO;
+  }
+  AromaChannels_WindowsPhoneDevice *other = (AromaChannels_WindowsPhoneDevice *)anObject;
+  return YES;
+}
+
+- (void) read: (id <TProtocol>) inProtocol
+{
+  NSString * fieldName;
+  int fieldType;
+  int fieldID;
+
+  [inProtocol readStructBeginReturningName: NULL];
+  while (true)
+  {
+    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
+    if (fieldType == TType_STOP) { 
+      break;
+    }
+    switch (fieldID)
+    {
+      default:
+        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        break;
+    }
+    [inProtocol readFieldEnd];
+  }
+  [inProtocol readStructEnd];
+}
+
+- (void) write: (id <TProtocol>) outProtocol {
+  [outProtocol writeStructBeginWithName: @"WindowsPhoneDevice"];
+  [outProtocol writeFieldStop];
+  [outProtocol writeStructEnd];
+}
+
+- (void) validate {
+  // check for required fields
+}
+
+- (NSString *) description {
+  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_WindowsPhoneDevice("];
+  [ms appendString: @")"];
+  return [NSString stringWithString: ms];
+}
+
+@end
+
+@implementation AromaChannels_MobileDevice
+
+- (id) init
+{
+  self = [super init];
+#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
+#endif
+  return self;
+}
+
+- (id) initWithIosDevice: (AromaChannels_IOSDevice *) iosDevice androidDevice: (AromaChannels_AndroidDevice *) androidDevice windowsPhoneDevice: (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice
+{
+  self = [super init];
+  __iosDevice = [iosDevice retain_stub];
+  __iosDevice_isset = YES;
+  __androidDevice = [androidDevice retain_stub];
+  __androidDevice_isset = YES;
+  __windowsPhoneDevice = [windowsPhoneDevice retain_stub];
+  __windowsPhoneDevice_isset = YES;
+  return self;
+}
+
+- (id) initWithCoder: (NSCoder *) decoder
+{
+  self = [super init];
+  if ([decoder containsValueForKey: @"iosDevice"])
+  {
+    __iosDevice = [[decoder decodeObjectForKey: @"iosDevice"] retain_stub];
+    __iosDevice_isset = YES;
+  }
+  if ([decoder containsValueForKey: @"androidDevice"])
+  {
+    __androidDevice = [[decoder decodeObjectForKey: @"androidDevice"] retain_stub];
+    __androidDevice_isset = YES;
+  }
+  if ([decoder containsValueForKey: @"windowsPhoneDevice"])
+  {
+    __windowsPhoneDevice = [[decoder decodeObjectForKey: @"windowsPhoneDevice"] retain_stub];
+    __windowsPhoneDevice_isset = YES;
+  }
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *) encoder
+{
+  if (__iosDevice_isset)
+  {
+    [encoder encodeObject: __iosDevice forKey: @"iosDevice"];
+  }
+  if (__androidDevice_isset)
+  {
+    [encoder encodeObject: __androidDevice forKey: @"androidDevice"];
+  }
+  if (__windowsPhoneDevice_isset)
+  {
+    [encoder encodeObject: __windowsPhoneDevice forKey: @"windowsPhoneDevice"];
+  }
+}
+
+- (NSUInteger) hash
+{
+  NSUInteger hash = 17;
+  hash = (hash * 31) ^ __iosDevice_isset ? 2654435761 : 0;
+  if (__iosDevice_isset)
+  {
+    hash = (hash * 31) ^ [__iosDevice hash];
+  }
+  hash = (hash * 31) ^ __androidDevice_isset ? 2654435761 : 0;
+  if (__androidDevice_isset)
+  {
+    hash = (hash * 31) ^ [__androidDevice hash];
+  }
+  hash = (hash * 31) ^ __windowsPhoneDevice_isset ? 2654435761 : 0;
+  if (__windowsPhoneDevice_isset)
+  {
+    hash = (hash * 31) ^ [__windowsPhoneDevice hash];
+  }
+  return hash;
+}
+
+- (BOOL) isEqual: (id) anObject
+{
+  if (self == anObject) {
+    return YES;
+  }
+  if (![anObject isKindOfClass:[AromaChannels_MobileDevice class]]) {
+    return NO;
+  }
+  AromaChannels_MobileDevice *other = (AromaChannels_MobileDevice *)anObject;
+  if ((__iosDevice_isset != other->__iosDevice_isset) ||
+      (__iosDevice_isset && ((__iosDevice || other->__iosDevice) && ![__iosDevice isEqual:other->__iosDevice]))) {
+    return NO;
+  }
+  if ((__androidDevice_isset != other->__androidDevice_isset) ||
+      (__androidDevice_isset && ((__androidDevice || other->__androidDevice) && ![__androidDevice isEqual:other->__androidDevice]))) {
+    return NO;
+  }
+  if ((__windowsPhoneDevice_isset != other->__windowsPhoneDevice_isset) ||
+      (__windowsPhoneDevice_isset && ((__windowsPhoneDevice || other->__windowsPhoneDevice) && ![__windowsPhoneDevice isEqual:other->__windowsPhoneDevice]))) {
+    return NO;
+  }
+  return YES;
+}
+
+- (void) dealloc
+{
+  [__iosDevice release_stub];
+  [__androidDevice release_stub];
+  [__windowsPhoneDevice release_stub];
+  [super dealloc_stub];
+}
+
+- (AromaChannels_IOSDevice *) iosDevice {
+  return [[__iosDevice retain_stub] autorelease_stub];
+}
+
+- (void) setIosDevice: (AromaChannels_IOSDevice *) iosDevice {
+  [iosDevice retain_stub];
+  [__iosDevice release_stub];
+  __iosDevice = iosDevice;
+  __iosDevice_isset = YES;
+}
+
+- (BOOL) iosDeviceIsSet {
+  return __iosDevice_isset;
+}
+
+- (void) unsetIosDevice {
+  [__iosDevice release_stub];
+  __iosDevice = nil;
+  __iosDevice_isset = NO;
+}
+
+- (AromaChannels_AndroidDevice *) androidDevice {
+  return [[__androidDevice retain_stub] autorelease_stub];
+}
+
+- (void) setAndroidDevice: (AromaChannels_AndroidDevice *) androidDevice {
+  [androidDevice retain_stub];
+  [__androidDevice release_stub];
+  __androidDevice = androidDevice;
+  __androidDevice_isset = YES;
+}
+
+- (BOOL) androidDeviceIsSet {
+  return __androidDevice_isset;
+}
+
+- (void) unsetAndroidDevice {
+  [__androidDevice release_stub];
+  __androidDevice = nil;
+  __androidDevice_isset = NO;
+}
+
+- (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice {
+  return [[__windowsPhoneDevice retain_stub] autorelease_stub];
+}
+
+- (void) setWindowsPhoneDevice: (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice {
+  [windowsPhoneDevice retain_stub];
+  [__windowsPhoneDevice release_stub];
+  __windowsPhoneDevice = windowsPhoneDevice;
+  __windowsPhoneDevice_isset = YES;
+}
+
+- (BOOL) windowsPhoneDeviceIsSet {
+  return __windowsPhoneDevice_isset;
+}
+
+- (void) unsetWindowsPhoneDevice {
+  [__windowsPhoneDevice release_stub];
+  __windowsPhoneDevice = nil;
+  __windowsPhoneDevice_isset = NO;
+}
+
+- (void) read: (id <TProtocol>) inProtocol
+{
+  NSString * fieldName;
+  int fieldType;
+  int fieldID;
+
+  [inProtocol readStructBeginReturningName: NULL];
+  while (true)
+  {
+    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
+    if (fieldType == TType_STOP) { 
+      break;
+    }
+    switch (fieldID)
+    {
+      case 1:
+        if (fieldType == TType_STRUCT) {
+          AromaChannels_IOSDevice *fieldValue = [[AromaChannels_IOSDevice alloc] init];
+          [fieldValue read: inProtocol];
+          [self setIosDevice: fieldValue];
+          [fieldValue release_stub];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      case 2:
+        if (fieldType == TType_STRUCT) {
+          AromaChannels_AndroidDevice *fieldValue = [[AromaChannels_AndroidDevice alloc] init];
+          [fieldValue read: inProtocol];
+          [self setAndroidDevice: fieldValue];
+          [fieldValue release_stub];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      case 3:
+        if (fieldType == TType_STRUCT) {
+          AromaChannels_WindowsPhoneDevice *fieldValue = [[AromaChannels_WindowsPhoneDevice alloc] init];
+          [fieldValue read: inProtocol];
+          [self setWindowsPhoneDevice: fieldValue];
+          [fieldValue release_stub];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      default:
+        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        break;
+    }
+    [inProtocol readFieldEnd];
+  }
+  [inProtocol readStructEnd];
+}
+
+- (void) write: (id <TProtocol>) outProtocol {
+  [outProtocol writeStructBeginWithName: @"MobileDevice"];
+  if (__iosDevice_isset) {
+    if (__iosDevice != nil) {
+      [outProtocol writeFieldBeginWithName: @"iosDevice" type: TType_STRUCT fieldID: 1];
+      [__iosDevice write: outProtocol];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  if (__androidDevice_isset) {
+    if (__androidDevice != nil) {
+      [outProtocol writeFieldBeginWithName: @"androidDevice" type: TType_STRUCT fieldID: 2];
+      [__androidDevice write: outProtocol];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  if (__windowsPhoneDevice_isset) {
+    if (__windowsPhoneDevice != nil) {
+      [outProtocol writeFieldBeginWithName: @"windowsPhoneDevice" type: TType_STRUCT fieldID: 3];
+      [__windowsPhoneDevice write: outProtocol];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  [outProtocol writeFieldStop];
+  [outProtocol writeStructEnd];
+}
+
+- (void) validate {
+  // check for required fields
+}
+
+- (NSString *) description {
+  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_MobileDevice("];
+  [ms appendString: @"iosDevice:"];
+  [ms appendFormat: @"%@", __iosDevice];
+  [ms appendString: @",androidDevice:"];
+  [ms appendFormat: @"%@", __androidDevice];
+  [ms appendString: @",windowsPhoneDevice:"];
+  [ms appendFormat: @"%@", __windowsPhoneDevice];
+  [ms appendString: @")"];
+  return [NSString stringWithString: ms];
+}
+
+@end
+
+@implementation AromaChannels_PushNotificationPayload
+
+- (id) init
+{
+  self = [super init];
+#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
+#endif
+  return self;
+}
+
+- (id) initWithMessageId: (AromaChannels_uuid) messageId applicationId: (AromaChannels_uuid) applicationId
+{
+  self = [super init];
+  __messageId = [messageId retain_stub];
+  __messageId_isset = YES;
+  __applicationId = [applicationId retain_stub];
+  __applicationId_isset = YES;
+  return self;
+}
+
+- (id) initWithCoder: (NSCoder *) decoder
+{
+  self = [super init];
+  if ([decoder containsValueForKey: @"messageId"])
+  {
+    __messageId = [[decoder decodeObjectForKey: @"messageId"] retain_stub];
+    __messageId_isset = YES;
+  }
+  if ([decoder containsValueForKey: @"applicationId"])
+  {
+    __applicationId = [[decoder decodeObjectForKey: @"applicationId"] retain_stub];
+    __applicationId_isset = YES;
+  }
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *) encoder
+{
+  if (__messageId_isset)
+  {
+    [encoder encodeObject: __messageId forKey: @"messageId"];
+  }
+  if (__applicationId_isset)
+  {
+    [encoder encodeObject: __applicationId forKey: @"applicationId"];
+  }
+}
+
+- (NSUInteger) hash
+{
+  NSUInteger hash = 17;
+  hash = (hash * 31) ^ __messageId_isset ? 2654435761 : 0;
+  if (__messageId_isset)
+  {
+    hash = (hash * 31) ^ [__messageId hash];
+  }
+  hash = (hash * 31) ^ __applicationId_isset ? 2654435761 : 0;
+  if (__applicationId_isset)
+  {
+    hash = (hash * 31) ^ [__applicationId hash];
+  }
+  return hash;
+}
+
+- (BOOL) isEqual: (id) anObject
+{
+  if (self == anObject) {
+    return YES;
+  }
+  if (![anObject isKindOfClass:[AromaChannels_PushNotificationPayload class]]) {
+    return NO;
+  }
+  AromaChannels_PushNotificationPayload *other = (AromaChannels_PushNotificationPayload *)anObject;
+  if ((__messageId_isset != other->__messageId_isset) ||
+      (__messageId_isset && ((__messageId || other->__messageId) && ![__messageId isEqual:other->__messageId]))) {
+    return NO;
+  }
+  if ((__applicationId_isset != other->__applicationId_isset) ||
+      (__applicationId_isset && ((__applicationId || other->__applicationId) && ![__applicationId isEqual:other->__applicationId]))) {
+    return NO;
+  }
+  return YES;
+}
+
+- (void) dealloc
+{
+  [__messageId release_stub];
+  [__applicationId release_stub];
+  [super dealloc_stub];
+}
+
+- (NSString *) messageId {
+  return [[__messageId retain_stub] autorelease_stub];
+}
+
+- (void) setMessageId: (NSString *) messageId {
+  [messageId retain_stub];
+  [__messageId release_stub];
+  __messageId = messageId;
+  __messageId_isset = YES;
+}
+
+- (BOOL) messageIdIsSet {
+  return __messageId_isset;
+}
+
+- (void) unsetMessageId {
+  [__messageId release_stub];
+  __messageId = nil;
+  __messageId_isset = NO;
+}
+
+- (NSString *) applicationId {
+  return [[__applicationId retain_stub] autorelease_stub];
+}
+
+- (void) setApplicationId: (NSString *) applicationId {
+  [applicationId retain_stub];
+  [__applicationId release_stub];
+  __applicationId = applicationId;
+  __applicationId_isset = YES;
+}
+
+- (BOOL) applicationIdIsSet {
+  return __applicationId_isset;
+}
+
+- (void) unsetApplicationId {
+  [__applicationId release_stub];
+  __applicationId = nil;
+  __applicationId_isset = NO;
+}
+
+- (void) read: (id <TProtocol>) inProtocol
+{
+  NSString * fieldName;
+  int fieldType;
+  int fieldID;
+
+  [inProtocol readStructBeginReturningName: NULL];
+  while (true)
+  {
+    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
+    if (fieldType == TType_STOP) { 
+      break;
+    }
+    switch (fieldID)
+    {
+      case 1:
+        if (fieldType == TType_STRING) {
+          NSString * fieldValue = [inProtocol readString];
+          [self setMessageId: fieldValue];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      case 2:
+        if (fieldType == TType_STRING) {
+          NSString * fieldValue = [inProtocol readString];
+          [self setApplicationId: fieldValue];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
+      default:
+        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        break;
+    }
+    [inProtocol readFieldEnd];
+  }
+  [inProtocol readStructEnd];
+}
+
+- (void) write: (id <TProtocol>) outProtocol {
+  [outProtocol writeStructBeginWithName: @"PushNotificationPayload"];
+  if (__messageId_isset) {
+    if (__messageId != nil) {
+      [outProtocol writeFieldBeginWithName: @"messageId" type: TType_STRING fieldID: 1];
+      [outProtocol writeString: __messageId];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  if (__applicationId_isset) {
+    if (__applicationId != nil) {
+      [outProtocol writeFieldBeginWithName: @"applicationId" type: TType_STRING fieldID: 2];
+      [outProtocol writeString: __applicationId];
+      [outProtocol writeFieldEnd];
+    }
+  }
+  [outProtocol writeFieldStop];
+  [outProtocol writeStructEnd];
+}
+
+- (void) validate {
+  // check for required fields
+}
+
+- (NSString *) description {
+  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_PushNotificationPayload("];
+  [ms appendString: @"messageId:"];
+  [ms appendFormat: @"\"%@\"", __messageId];
+  [ms appendString: @",applicationId:"];
+  [ms appendFormat: @"\"%@\"", __applicationId];
+  [ms appendString: @")"];
+  return [NSString stringWithString: ms];
+}
+
+@end
+
 @implementation AromaChannels_SlackChannel
 
 - (id) init
@@ -923,306 +1784,6 @@
 
 @end
 
-@implementation AromaChannels_IOSDevice
-
-- (id) init
-{
-  self = [super init];
-#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
-#endif
-  return self;
-}
-
-- (id) initWithDeviceToken: (NSString *) deviceToken
-{
-  self = [super init];
-  __deviceToken = [deviceToken retain_stub];
-  __deviceToken_isset = YES;
-  return self;
-}
-
-- (id) initWithCoder: (NSCoder *) decoder
-{
-  self = [super init];
-  if ([decoder containsValueForKey: @"deviceToken"])
-  {
-    __deviceToken = [[decoder decodeObjectForKey: @"deviceToken"] retain_stub];
-    __deviceToken_isset = YES;
-  }
-  return self;
-}
-
-- (void) encodeWithCoder: (NSCoder *) encoder
-{
-  if (__deviceToken_isset)
-  {
-    [encoder encodeObject: __deviceToken forKey: @"deviceToken"];
-  }
-}
-
-- (NSUInteger) hash
-{
-  NSUInteger hash = 17;
-  hash = (hash * 31) ^ __deviceToken_isset ? 2654435761 : 0;
-  if (__deviceToken_isset)
-  {
-    hash = (hash * 31) ^ [__deviceToken hash];
-  }
-  return hash;
-}
-
-- (BOOL) isEqual: (id) anObject
-{
-  if (self == anObject) {
-    return YES;
-  }
-  if (![anObject isKindOfClass:[AromaChannels_IOSDevice class]]) {
-    return NO;
-  }
-  AromaChannels_IOSDevice *other = (AromaChannels_IOSDevice *)anObject;
-  if ((__deviceToken_isset != other->__deviceToken_isset) ||
-      (__deviceToken_isset && ((__deviceToken || other->__deviceToken) && ![__deviceToken isEqual:other->__deviceToken]))) {
-    return NO;
-  }
-  return YES;
-}
-
-- (void) dealloc
-{
-  [__deviceToken release_stub];
-  [super dealloc_stub];
-}
-
-- (NSString *) deviceToken {
-  return [[__deviceToken retain_stub] autorelease_stub];
-}
-
-- (void) setDeviceToken: (NSString *) deviceToken {
-  [deviceToken retain_stub];
-  [__deviceToken release_stub];
-  __deviceToken = deviceToken;
-  __deviceToken_isset = YES;
-}
-
-- (BOOL) deviceTokenIsSet {
-  return __deviceToken_isset;
-}
-
-- (void) unsetDeviceToken {
-  [__deviceToken release_stub];
-  __deviceToken = nil;
-  __deviceToken_isset = NO;
-}
-
-- (void) read: (id <TProtocol>) inProtocol
-{
-  NSString * fieldName;
-  int fieldType;
-  int fieldID;
-
-  [inProtocol readStructBeginReturningName: NULL];
-  while (true)
-  {
-    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
-    if (fieldType == TType_STOP) { 
-      break;
-    }
-    switch (fieldID)
-    {
-      case 1:
-        if (fieldType == TType_STRING) {
-          NSString * fieldValue = [inProtocol readString];
-          [self setDeviceToken: fieldValue];
-        } else { 
-          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
-        }
-        break;
-      default:
-        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
-        break;
-    }
-    [inProtocol readFieldEnd];
-  }
-  [inProtocol readStructEnd];
-}
-
-- (void) write: (id <TProtocol>) outProtocol {
-  [outProtocol writeStructBeginWithName: @"IOSDevice"];
-  if (__deviceToken_isset) {
-    if (__deviceToken != nil) {
-      [outProtocol writeFieldBeginWithName: @"deviceToken" type: TType_STRING fieldID: 1];
-      [outProtocol writeString: __deviceToken];
-      [outProtocol writeFieldEnd];
-    }
-  }
-  [outProtocol writeFieldStop];
-  [outProtocol writeStructEnd];
-}
-
-- (void) validate {
-  // check for required fields
-}
-
-- (NSString *) description {
-  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_IOSDevice("];
-  [ms appendString: @"deviceToken:"];
-  [ms appendFormat: @"\"%@\"", __deviceToken];
-  [ms appendString: @")"];
-  return [NSString stringWithString: ms];
-}
-
-@end
-
-@implementation AromaChannels_AndroidDevice
-
-- (id) init
-{
-  self = [super init];
-#if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
-#endif
-  return self;
-}
-
-- (id) initWithDeviceId: (NSString *) deviceId
-{
-  self = [super init];
-  __deviceId = [deviceId retain_stub];
-  __deviceId_isset = YES;
-  return self;
-}
-
-- (id) initWithCoder: (NSCoder *) decoder
-{
-  self = [super init];
-  if ([decoder containsValueForKey: @"deviceId"])
-  {
-    __deviceId = [[decoder decodeObjectForKey: @"deviceId"] retain_stub];
-    __deviceId_isset = YES;
-  }
-  return self;
-}
-
-- (void) encodeWithCoder: (NSCoder *) encoder
-{
-  if (__deviceId_isset)
-  {
-    [encoder encodeObject: __deviceId forKey: @"deviceId"];
-  }
-}
-
-- (NSUInteger) hash
-{
-  NSUInteger hash = 17;
-  hash = (hash * 31) ^ __deviceId_isset ? 2654435761 : 0;
-  if (__deviceId_isset)
-  {
-    hash = (hash * 31) ^ [__deviceId hash];
-  }
-  return hash;
-}
-
-- (BOOL) isEqual: (id) anObject
-{
-  if (self == anObject) {
-    return YES;
-  }
-  if (![anObject isKindOfClass:[AromaChannels_AndroidDevice class]]) {
-    return NO;
-  }
-  AromaChannels_AndroidDevice *other = (AromaChannels_AndroidDevice *)anObject;
-  if ((__deviceId_isset != other->__deviceId_isset) ||
-      (__deviceId_isset && ((__deviceId || other->__deviceId) && ![__deviceId isEqual:other->__deviceId]))) {
-    return NO;
-  }
-  return YES;
-}
-
-- (void) dealloc
-{
-  [__deviceId release_stub];
-  [super dealloc_stub];
-}
-
-- (NSString *) deviceId {
-  return [[__deviceId retain_stub] autorelease_stub];
-}
-
-- (void) setDeviceId: (NSString *) deviceId {
-  [deviceId retain_stub];
-  [__deviceId release_stub];
-  __deviceId = deviceId;
-  __deviceId_isset = YES;
-}
-
-- (BOOL) deviceIdIsSet {
-  return __deviceId_isset;
-}
-
-- (void) unsetDeviceId {
-  [__deviceId release_stub];
-  __deviceId = nil;
-  __deviceId_isset = NO;
-}
-
-- (void) read: (id <TProtocol>) inProtocol
-{
-  NSString * fieldName;
-  int fieldType;
-  int fieldID;
-
-  [inProtocol readStructBeginReturningName: NULL];
-  while (true)
-  {
-    [inProtocol readFieldBeginReturningName: &fieldName type: &fieldType fieldID: &fieldID];
-    if (fieldType == TType_STOP) { 
-      break;
-    }
-    switch (fieldID)
-    {
-      case 1:
-        if (fieldType == TType_STRING) {
-          NSString * fieldValue = [inProtocol readString];
-          [self setDeviceId: fieldValue];
-        } else { 
-          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
-        }
-        break;
-      default:
-        [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
-        break;
-    }
-    [inProtocol readFieldEnd];
-  }
-  [inProtocol readStructEnd];
-}
-
-- (void) write: (id <TProtocol>) outProtocol {
-  [outProtocol writeStructBeginWithName: @"AndroidDevice"];
-  if (__deviceId_isset) {
-    if (__deviceId != nil) {
-      [outProtocol writeFieldBeginWithName: @"deviceId" type: TType_STRING fieldID: 1];
-      [outProtocol writeString: __deviceId];
-      [outProtocol writeFieldEnd];
-    }
-  }
-  [outProtocol writeFieldStop];
-  [outProtocol writeStructEnd];
-}
-
-- (void) validate {
-  // check for required fields
-}
-
-- (NSString *) description {
-  NSMutableString * ms = [NSMutableString stringWithString: @"AromaChannels_AndroidDevice("];
-  [ms appendString: @"deviceId:"];
-  [ms appendFormat: @"\"%@\"", __deviceId];
-  [ms appendString: @")"];
-  return [NSString stringWithString: ms];
-}
-
-@end
-
 @implementation AromaChannels_AromaChannel
 
 - (id) init
@@ -1233,7 +1794,7 @@
   return self;
 }
 
-- (id) initWithSlackChannel: (AromaChannels_SlackChannel *) slackChannel slackUsername: (AromaChannels_SlackUsername *) slackUsername email: (AromaChannels_Email *) email customChannel: (AromaChannels_CustomChannel *) customChannel iosDevice: (AromaChannels_IOSDevice *) iosDevice androidDevice: (AromaChannels_AndroidDevice *) androidDevice
+- (id) initWithSlackChannel: (AromaChannels_SlackChannel *) slackChannel slackUsername: (AromaChannels_SlackUsername *) slackUsername email: (AromaChannels_Email *) email customChannel: (AromaChannels_CustomChannel *) customChannel iosDevice: (AromaChannels_IOSDevice *) iosDevice androidDevice: (AromaChannels_AndroidDevice *) androidDevice windowsPhoneDevice: (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice
 {
   self = [super init];
   __slackChannel = [slackChannel retain_stub];
@@ -1248,6 +1809,8 @@
   __iosDevice_isset = YES;
   __androidDevice = [androidDevice retain_stub];
   __androidDevice_isset = YES;
+  __windowsPhoneDevice = [windowsPhoneDevice retain_stub];
+  __windowsPhoneDevice_isset = YES;
   return self;
 }
 
@@ -1284,6 +1847,11 @@
     __androidDevice = [[decoder decodeObjectForKey: @"androidDevice"] retain_stub];
     __androidDevice_isset = YES;
   }
+  if ([decoder containsValueForKey: @"windowsPhoneDevice"])
+  {
+    __windowsPhoneDevice = [[decoder decodeObjectForKey: @"windowsPhoneDevice"] retain_stub];
+    __windowsPhoneDevice_isset = YES;
+  }
   return self;
 }
 
@@ -1312,6 +1880,10 @@
   if (__androidDevice_isset)
   {
     [encoder encodeObject: __androidDevice forKey: @"androidDevice"];
+  }
+  if (__windowsPhoneDevice_isset)
+  {
+    [encoder encodeObject: __windowsPhoneDevice forKey: @"windowsPhoneDevice"];
   }
 }
 
@@ -1347,6 +1919,11 @@
   if (__androidDevice_isset)
   {
     hash = (hash * 31) ^ [__androidDevice hash];
+  }
+  hash = (hash * 31) ^ __windowsPhoneDevice_isset ? 2654435761 : 0;
+  if (__windowsPhoneDevice_isset)
+  {
+    hash = (hash * 31) ^ [__windowsPhoneDevice hash];
   }
   return hash;
 }
@@ -1384,6 +1961,10 @@
       (__androidDevice_isset && ((__androidDevice || other->__androidDevice) && ![__androidDevice isEqual:other->__androidDevice]))) {
     return NO;
   }
+  if ((__windowsPhoneDevice_isset != other->__windowsPhoneDevice_isset) ||
+      (__windowsPhoneDevice_isset && ((__windowsPhoneDevice || other->__windowsPhoneDevice) && ![__windowsPhoneDevice isEqual:other->__windowsPhoneDevice]))) {
+    return NO;
+  }
   return YES;
 }
 
@@ -1395,6 +1976,7 @@
   [__customChannel release_stub];
   [__iosDevice release_stub];
   [__androidDevice release_stub];
+  [__windowsPhoneDevice release_stub];
   [super dealloc_stub];
 }
 
@@ -1524,6 +2106,27 @@
   __androidDevice_isset = NO;
 }
 
+- (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice {
+  return [[__windowsPhoneDevice retain_stub] autorelease_stub];
+}
+
+- (void) setWindowsPhoneDevice: (AromaChannels_WindowsPhoneDevice *) windowsPhoneDevice {
+  [windowsPhoneDevice retain_stub];
+  [__windowsPhoneDevice release_stub];
+  __windowsPhoneDevice = windowsPhoneDevice;
+  __windowsPhoneDevice_isset = YES;
+}
+
+- (BOOL) windowsPhoneDeviceIsSet {
+  return __windowsPhoneDevice_isset;
+}
+
+- (void) unsetWindowsPhoneDevice {
+  [__windowsPhoneDevice release_stub];
+  __windowsPhoneDevice = nil;
+  __windowsPhoneDevice_isset = NO;
+}
+
 - (void) read: (id <TProtocol>) inProtocol
 {
   NSString * fieldName;
@@ -1599,6 +2202,16 @@
           [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
         }
         break;
+      case 7:
+        if (fieldType == TType_STRUCT) {
+          AromaChannels_WindowsPhoneDevice *fieldValue = [[AromaChannels_WindowsPhoneDevice alloc] init];
+          [fieldValue read: inProtocol];
+          [self setWindowsPhoneDevice: fieldValue];
+          [fieldValue release_stub];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
       default:
         [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
         break;
@@ -1652,6 +2265,13 @@
       [outProtocol writeFieldEnd];
     }
   }
+  if (__windowsPhoneDevice_isset) {
+    if (__windowsPhoneDevice != nil) {
+      [outProtocol writeFieldBeginWithName: @"windowsPhoneDevice" type: TType_STRUCT fieldID: 7];
+      [__windowsPhoneDevice write: outProtocol];
+      [outProtocol writeFieldEnd];
+    }
+  }
   [outProtocol writeFieldStop];
   [outProtocol writeStructEnd];
 }
@@ -1674,6 +2294,8 @@
   [ms appendFormat: @"%@", __iosDevice];
   [ms appendString: @",androidDevice:"];
   [ms appendFormat: @"%@", __androidDevice];
+  [ms appendString: @",windowsPhoneDevice:"];
+  [ms appendFormat: @"%@", __windowsPhoneDevice];
   [ms appendString: @")"];
   return [NSString stringWithString: ms];
 }
@@ -1690,13 +2312,15 @@
   return self;
 }
 
-- (id) initWithChannel: (AromaChannels_AromaChannel *) channel timeRegistered: (AromaChannels_timestamp) timeRegistered
+- (id) initWithChannel: (AromaChannels_AromaChannel *) channel timeRegistered: (AromaChannels_timestamp) timeRegistered channelId: (AromaChannels_uuid) channelId
 {
   self = [super init];
   __channel = [channel retain_stub];
   __channel_isset = YES;
   __timeRegistered = timeRegistered;
   __timeRegistered_isset = YES;
+  __channelId = [channelId retain_stub];
+  __channelId_isset = YES;
   return self;
 }
 
@@ -1713,6 +2337,11 @@
     __timeRegistered = [decoder decodeInt64ForKey: @"timeRegistered"];
     __timeRegistered_isset = YES;
   }
+  if ([decoder containsValueForKey: @"channelId"])
+  {
+    __channelId = [[decoder decodeObjectForKey: @"channelId"] retain_stub];
+    __channelId_isset = YES;
+  }
   return self;
 }
 
@@ -1725,6 +2354,10 @@
   if (__timeRegistered_isset)
   {
     [encoder encodeInt64: __timeRegistered forKey: @"timeRegistered"];
+  }
+  if (__channelId_isset)
+  {
+    [encoder encodeObject: __channelId forKey: @"channelId"];
   }
 }
 
@@ -1740,6 +2373,11 @@
   if (__timeRegistered_isset)
   {
     hash = (hash * 31) ^ [@(__timeRegistered) hash];
+  }
+  hash = (hash * 31) ^ __channelId_isset ? 2654435761 : 0;
+  if (__channelId_isset)
+  {
+    hash = (hash * 31) ^ [__channelId hash];
   }
   return hash;
 }
@@ -1761,12 +2399,17 @@
       (__timeRegistered_isset && (__timeRegistered != other->__timeRegistered))) {
     return NO;
   }
+  if ((__channelId_isset != other->__channelId_isset) ||
+      (__channelId_isset && ((__channelId || other->__channelId) && ![__channelId isEqual:other->__channelId]))) {
+    return NO;
+  }
   return YES;
 }
 
 - (void) dealloc
 {
   [__channel release_stub];
+  [__channelId release_stub];
   [super dealloc_stub];
 }
 
@@ -1808,6 +2451,27 @@
   __timeRegistered_isset = NO;
 }
 
+- (NSString *) channelId {
+  return [[__channelId retain_stub] autorelease_stub];
+}
+
+- (void) setChannelId: (NSString *) channelId {
+  [channelId retain_stub];
+  [__channelId release_stub];
+  __channelId = channelId;
+  __channelId_isset = YES;
+}
+
+- (BOOL) channelIdIsSet {
+  return __channelId_isset;
+}
+
+- (void) unsetChannelId {
+  [__channelId release_stub];
+  __channelId = nil;
+  __channelId_isset = NO;
+}
+
 - (void) read: (id <TProtocol>) inProtocol
 {
   NSString * fieldName;
@@ -1841,6 +2505,14 @@
           [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
         }
         break;
+      case 3:
+        if (fieldType == TType_STRING) {
+          NSString * fieldValue = [inProtocol readString];
+          [self setChannelId: fieldValue];
+        } else { 
+          [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
+        }
+        break;
       default:
         [TProtocolUtil skipType: fieldType onProtocol: inProtocol];
         break;
@@ -1864,6 +2536,13 @@
     [outProtocol writeI64: __timeRegistered];
     [outProtocol writeFieldEnd];
   }
+  if (__channelId_isset) {
+    if (__channelId != nil) {
+      [outProtocol writeFieldBeginWithName: @"channelId" type: TType_STRING fieldID: 3];
+      [outProtocol writeString: __channelId];
+      [outProtocol writeFieldEnd];
+    }
+  }
   [outProtocol writeFieldStop];
   [outProtocol writeStructEnd];
 }
@@ -1878,6 +2557,8 @@
   [ms appendFormat: @"%@", __channel];
   [ms appendString: @",timeRegistered:"];
   [ms appendFormat: @"%qi", __timeRegistered];
+  [ms appendString: @",channelId:"];
+  [ms appendFormat: @"\"%@\"", __channelId];
   [ms appendString: @")"];
   return [NSString stringWithString: ms];
 }
@@ -2036,9 +2717,13 @@
 
 @end
 
+static NSString * AromaChannels_PUSH_NOTIFICATION_KEY_FOR_PAYLOAD = @"aroma.notification.payload";
 
 @implementation AromaChannels_ChannelsConstants
 + (void) initialize {
+}
++ (NSString *) PUSH_NOTIFICATION_KEY_FOR_PAYLOAD{
+  return AromaChannels_PUSH_NOTIFICATION_KEY_FOR_PAYLOAD;
 }
 @end
 

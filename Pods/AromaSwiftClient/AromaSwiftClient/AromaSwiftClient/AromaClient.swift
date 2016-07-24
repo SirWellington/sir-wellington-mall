@@ -26,6 +26,7 @@ public class AromaClient
     
     //Defaults
     public static var deviceName: String = UIDevice.currentDevice().name
+        
 
     //Async and Threading
     private static let async = NSOperationQueue()
@@ -62,7 +63,8 @@ public class AromaClient
 }
 
 //MARK : API
-extension AromaClient {
+extension AromaClient
+{
 
     public static func beginWithTitle(title: String) -> AromaRequest
     {

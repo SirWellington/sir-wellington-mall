@@ -62,6 +62,8 @@ typedef AromaException_UnauthorizedException * ApplicationService_UnauthorizedEx
   NSString * __hostname;
   NSString * __macAddress;
   NSString * __ipv4Address;
+  NSString * __deviceName;
+  NSString * __operatingSystemName;
 
   BOOL __applicationToken_isset;
   BOOL __body_isset;
@@ -71,6 +73,8 @@ typedef AromaException_UnauthorizedException * ApplicationService_UnauthorizedEx
   BOOL __hostname_isset;
   BOOL __macAddress_isset;
   BOOL __ipv4Address_isset;
+  BOOL __deviceName_isset;
+  BOOL __operatingSystemName_isset;
 }
 
 #if TARGET_OS_IPHONE || (MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5)
@@ -82,10 +86,12 @@ typedef AromaException_UnauthorizedException * ApplicationService_UnauthorizedEx
 @property (nonatomic, retain, getter=hostname, setter=setHostname:) NSString * hostname;
 @property (nonatomic, retain, getter=macAddress, setter=setMacAddress:) NSString * macAddress;
 @property (nonatomic, retain, getter=ipv4Address, setter=setIpv4Address:) NSString * ipv4Address;
+@property (nonatomic, retain, getter=deviceName, setter=setDeviceName:) NSString * deviceName;
+@property (nonatomic, retain, getter=operatingSystemName, setter=setOperatingSystemName:) NSString * operatingSystemName;
 #endif
 
 - (id) init;
-- (id) initWithApplicationToken: (ApplicationService_ApplicationToken) applicationToken body: (NSString *) body urgency: (ApplicationService_Urgency) urgency timeOfMessage: (ApplicationService_timestamp) timeOfMessage title: (NSString *) title hostname: (NSString *) hostname macAddress: (NSString *) macAddress ipv4Address: (NSString *) ipv4Address;
+- (id) initWithApplicationToken: (ApplicationService_ApplicationToken) applicationToken body: (NSString *) body urgency: (ApplicationService_Urgency) urgency timeOfMessage: (ApplicationService_timestamp) timeOfMessage title: (NSString *) title hostname: (NSString *) hostname macAddress: (NSString *) macAddress ipv4Address: (NSString *) ipv4Address deviceName: (NSString *) deviceName operatingSystemName: (NSString *) operatingSystemName;
 
 - (void) read: (id <TProtocol>) inProtocol;
 - (void) write: (id <TProtocol>) outProtocol;
@@ -140,6 +146,18 @@ typedef AromaException_UnauthorizedException * ApplicationService_UnauthorizedEx
 #endif
 - (BOOL) ipv4AddressIsSet;
 
+#if !__has_feature(objc_arc)
+- (NSString *) deviceName;
+- (void) setDeviceName: (NSString *) deviceName;
+#endif
+- (BOOL) deviceNameIsSet;
+
+#if !__has_feature(objc_arc)
+- (NSString *) operatingSystemName;
+- (void) setOperatingSystemName: (NSString *) operatingSystemName;
+#endif
+- (BOOL) operatingSystemNameIsSet;
+
 @end
 
 @interface ApplicationService_SendMessageResponse : NSObject <TBase, NSCoding> {
@@ -191,4 +209,6 @@ typedef AromaException_UnauthorizedException * ApplicationService_UnauthorizedEx
 + (ApplicationService_int) SERVICE_PORT;
 + (AromaEndpoint_TcpEndpoint *) PRODUCTION_ENDPOINT;
 + (AromaEndpoint_TcpEndpoint *) BETA_ENDPOINT;
++ (ApplicationService_int) MAX_TITLE_LENGTH;
++ (ApplicationService_int) MAX_CHARACTERS_IN_BODY;
 @end

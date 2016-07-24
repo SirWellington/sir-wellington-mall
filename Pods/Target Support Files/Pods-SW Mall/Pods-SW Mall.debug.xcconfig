@@ -1,0 +1,10 @@
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AromaSwiftClient" "$PODS_CONFIGURATION_BUILD_DIR/AromaThrift" "$PODS_CONFIGURATION_BUILD_DIR/BRYXBanner" "$PODS_CONFIGURATION_BUILD_DIR/LTMorphingLabel" "$PODS_CONFIGURATION_BUILD_DIR/MCSwipeTableViewCell" "$PODS_CONFIGURATION_BUILD_DIR/SwiftExceptionCatcher" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON" "$PODS_CONFIGURATION_BUILD_DIR/ThriftLib"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/AromaSwiftClient/AromaSwiftClient.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/AromaThrift/AromaThrift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/BRYXBanner/BRYXBanner.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/LTMorphingLabel/LTMorphingLabel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MCSwipeTableViewCell/MCSwipeTableViewCell.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftExceptionCatcher/SwiftExceptionCatcher.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ThriftLib/ThriftLib.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "AromaSwiftClient" -framework "AromaThrift" -framework "BRYXBanner" -framework "LTMorphingLabel" -framework "MCSwipeTableViewCell" -framework "SwiftExceptionCatcher" -framework "SwiftyJSON" -framework "ThriftLib"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/../Pods
