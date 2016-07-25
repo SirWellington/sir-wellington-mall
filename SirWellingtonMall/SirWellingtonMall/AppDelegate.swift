@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    private let AROMA_TOKEN = "2b48275b-2ad2-47dd-96be-97b1a8c7cd26"
+    private let AROMA_TOKEN = "368c7f6b-59ed-449a-878e-90a8383b00f2"
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
