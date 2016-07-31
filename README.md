@@ -1,5 +1,6 @@
-Sir Wellington Mall [![Aroma Enabled](http://brand.redroma.tech.s3-us-west-2.amazonaws.com/Badges/Aroma-Badge.svg)](http://aroma.redroma.tech/)
+Sir Wellington Mall
 =====================================
+[![Aroma Enabled](http://brand.redroma.tech.s3-us-west-2.amazonaws.com/Badges/Aroma-Badge.svg)](http://aroma.redroma.tech/)
 
 [<img src="Design/Logo/Type/Icon-512@2x.png" width="400">](https://github.com/SirWellington/sir-wellington-mall)
 
